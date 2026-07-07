@@ -74,13 +74,27 @@ function SupportPage() {
             <h2 className="font-display text-4xl text-navy md:text-5xl">{t("support.ways.title")}</h2>
           </div>
           <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-            {ways.map((w) => (
-              <div key={w.title} className="rounded-3xl border border-border bg-background p-8 hover:border-sage transition-colors">
-                <w.icon className="h-6 w-6 text-sage" />
-                <h3 className="mt-5 font-display text-2xl text-navy">{w.title}</h3>
-                <p className="mt-3 text-sm text-foreground/65 leading-relaxed">{w.body}</p>
-              </div>
-            ))}
+            {ways.map((w) => {
+              const Card = (
+                <div className="rounded-3xl border border-border bg-background p-8 hover:border-sage transition-colors">
+                  <w.icon className="h-6 w-6 text-sage" />
+                  <h3 className="mt-5 font-display text-2xl text-navy">{w.title}</h3>
+                  <p className="mt-3 text-sm text-foreground/65 leading-relaxed">{w.body}</p>
+                  {w.link && (
+                    <div className="mt-4 inline-flex items-center gap-1.5 text-sm font-medium text-sage hover:text-navy transition-colors">
+                      {w.linkLabel} <ArrowRight className="h-3.5 w-3.5" />
+                    </div>
+                  )}
+                </div>
+              );
+              return w.link ? (
+                <a key={w.title} href={w.link} target="_blank" rel="noopener noreferrer">
+                  {Card}
+                </a>
+              ) : (
+                <div key={w.title}>{Card}</div>
+              );
+            })}
           </div>
         </div>
       </section>

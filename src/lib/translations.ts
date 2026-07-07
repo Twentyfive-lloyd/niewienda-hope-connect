@@ -5,6 +5,7 @@ const fr = {
   "nav.home": "Accueil",
   "nav.mission": "Notre Mission",
   "nav.actions": "Nos Actions",
+  "nav.partners": "Partenaires",
   "nav.understand": "Comprendre le Diabète",
   "nav.support": "Nous Soutenir",
 
@@ -121,6 +122,7 @@ const en: typeof fr = {
   "nav.home": "Home",
   "nav.mission": "Our Mission",
   "nav.actions": "Our Actions",
+  "nav.partners": "Partners",
   "nav.understand": "Understanding Diabetes",
   "nav.support": "Support Us",
 

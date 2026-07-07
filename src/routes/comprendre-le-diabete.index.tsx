@@ -26,17 +26,17 @@ function UnderstandHub() {
         <img src="/images/img20.jpg" alt="" className="absolute inset-0 h-full w-full object-cover" />
         <div className="absolute inset-0 hero-overlay" />
         <div className="relative z-10 flex h-full items-end pb-16">
-          <div className="container-site text-primary-foreground max-w-3xl xl:max-w-5xl">
+          <div className="container-site text-primary-foreground max-w-3xl">
             <div className="text-xs uppercase tracking-[0.22em] text-white/80">{t("understand.hero.eyebrow")}</div>
-            <h1 className="mt-4 font-display text-5xl leading-[1.05] md:text-7xl xl:text-8xl">{t("understand.hero.title")}</h1>
-            <p className="mt-6 text-lg xl:text-xl text-white/85">{t("understand.hero.subtitle")}</p>
+            <h1 className="mt-4 font-display text-5xl leading-[1.05] md:text-7xl">{t("understand.hero.title")}</h1>
+            <p className="mt-6 text-lg text-white/85">{t("understand.hero.subtitle")}</p>
           </div>
         </div>
       </section>
 
       <section className="py-24 md:py-32">
         <div className="container-site">
-          <div className="max-w-2xl xl:max-w-4xl">
+          <div className="max-w-2xl">
             <div className="text-xs uppercase tracking-[0.22em] text-sage">
               <BookOpen className="mr-2 inline h-3.5 w-3.5" /> {t("understand.topics.title")}
             </div>

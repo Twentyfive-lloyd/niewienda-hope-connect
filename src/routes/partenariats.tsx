@@ -35,8 +35,8 @@ function PartenariatsPage() {
         <div className="container-site">
           <div className="mx-auto max-w-3xl text-center">
             <div className="text-xs uppercase tracking-[0.22em] text-sage">{t("partners.page.eyebrow")}</div>
-            <h1 className="mt-4 font-display text-5xl leading-[1.05] text-navy md:text-6xl xl:text-7xl">{t("partners.page.title")}</h1>
-            <p className="mt-6 text-lg xl:text-xl text-foreground/75">{t("partners.page.subtitle")}</p>
+            <h1 className="mt-4 font-display text-5xl leading-[1.05] text-navy md:text-6xl">{t("partners.page.title")}</h1>
+            <p className="mt-6 text-lg text-foreground/75">{t("partners.page.subtitle")}</p>
           </div>
 
           <div className="mt-12 flex flex-wrap w-full max-w-3xl mx-auto items-center justify-center gap-6 md:gap-8">
@@ -70,8 +70,8 @@ function PartenariatsPage() {
           <div>
             <div className="text-xs uppercase tracking-[0.22em] text-sage">{t("partners.eyebrow")}</div>
             <h2 className="mt-4 font-display text-4xl leading-tight text-navy md:text-5xl">{t("partners.title")}</h2>
-            <p className="mt-6 text-lg xl:text-xl leading-relaxed text-foreground/75">{t("partners.page.intro")}</p>
-            <p className="mt-4 text-lg xl:text-xl leading-relaxed text-foreground/75">{t("partners.tagline")}</p>
+            <p className="mt-6 text-lg leading-relaxed text-foreground/75">{t("partners.page.intro")}</p>
+            <p className="mt-4 text-lg leading-relaxed text-foreground/75">{t("partners.tagline")}</p>
           </div>
           <div>
             <img

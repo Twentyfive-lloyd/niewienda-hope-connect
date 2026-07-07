@@ -85,6 +85,12 @@ const fr = {
   "support.faq.title": "Questions fréquentes",
   "support.final.title": "Chaque geste compte. Chaque vie compte.",
   "support.final.body": "Rejoignez-nous aujourd'hui et devenez acteur d'un changement durable.",
+  "partners.eyebrow": "Partenariat officiel",
+  "partners.title": "Nos partenaires",
+  "partners.body": "Niewienda Health e.V. et OZISS Cooperation unissent leurs forces pour développer des solutions innovantes et durables au service de la santé, de la technologie et des communautés.",
+  "partners.oziss.name": "OZISS Cooperation",
+  "partners.oziss.role": "Technology Solution Integration",
+  "partners.tagline": "Deux organisations, une même vision : bâtir ensemble un avenir meilleur.",
 
   // Footer
   "footer.tagline": "Ensemble pour un avenir sans diabète en Afrique.",

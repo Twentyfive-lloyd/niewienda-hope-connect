@@ -183,6 +183,27 @@
   padding-inline: 1.25rem;
 }
 
+@media (min-width: 1280px) {
+  .container-site {
+    max-width: 88rem;
+    padding-inline: 2rem;
+  }
+}
+
+@media (min-width: 1536px) {
+  .container-site {
+    max-width: 96rem;
+    padding-inline: 2.5rem;
+  }
+}
+
+@media (min-width: 1920px) {
+  .container-site {
+    max-width: 110rem;
+    padding-inline: 3rem;
+  }
+}
+
 @utility hero-overlay {
   background: linear-gradient(180deg, color-mix(in oklab, var(--navy) 45%, transparent) 0%, color-mix(in oklab, var(--navy) 70%, transparent) 100%);
 }

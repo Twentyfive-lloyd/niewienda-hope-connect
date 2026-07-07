@@ -139,18 +139,17 @@ function MissionPage() {
             <h2 className="mt-2 font-display text-4xl text-navy md:text-5xl">{t("mission.team.title")}</h2>
             <p className="mt-4 text-lg text-foreground/70">{t("mission.team.body")}</p>
           </div>
-          <div className="mt-14 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-14 grid gap-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
             {[
               { fr: "Niewienda A.", en: "Niewienda A.", roleFr: "Présidente de l'association:", roleEn: "President of the association:" },
               { fr: "Erika Nouetagni", en: "Erika Nouetagni", roleFr: "Présidente par interim", roleEn: "Interim President" },
               { fr: "Zianie Ouethy", en: "Zianie Ouethy", roleFr: "Caissière", roleEn: "Treasurer" },
-              { fr: "Kevin Njiokeng", en: "Kevin Njiokeng", roleFr: "Secrétaire", roleEn: "Secretary" }
+              { fr: "Kevin Njiokeng", en: "Kevin Njiokeng", roleFr: "Secrétaire", roleEn: "Secretary" },
+              { fr: "Tchiencheu Manga Olivier", en: "Tchiencheu Manga Olivier", roleFr: "Chargé des partenariats", roleEn: "Partnership Manager" }
             ].map((member, i) => (
               <div key={i} className="group">
-                <div className="aspect-[4/5] overflow-hidden rounded-2xl bg-gradient-to-br from-sage-soft to-muted flex items-end justify-center">
-                  <div className="mb-6 h-20 w-20 rounded-full bg-navy/10 flex items-center justify-center font-display text-2xl text-navy">
-                    {member.fr.charAt(0)}
-                  </div>
+                <div className="aspect-[4/5] overflow-hidden rounded-2xl bg-cream flex items-center justify-center p-6">
+                  <img src="/images/logo.jpg" alt={member.fr} className="h-24 w-24 object-contain rounded-full" />
                 </div>
                 <div className="mt-4">
                   <div className="font-display text-xl text-navy">{lang === "fr" ? member.fr : member.en}</div>

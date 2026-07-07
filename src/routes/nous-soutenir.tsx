@@ -23,7 +23,7 @@ function SupportPage() {
   const [sent, setSent] = useState(false);
 
   const ways = [
-    { icon: HandCoins, title: t("cta.donate"), body: lang === "fr" ? "Chaque don finance directement nos campagnes de dépistage et notre suivi médical." : "Every donation directly funds our screening campaigns and medical follow-up." },
+    { icon: HandCoins, title: t("cta.donate"), body: lang === "fr" ? "Chaque don finance directement nos campagnes de dépistage et notre suivi médical." : "Every donation directly funds our screening campaigns and medical follow-up.", link: "https://gofund.me/41a559981", linkLabel: lang === "fr" ? "Contribuer à la cagnotte" : "Contribute to the fundraiser" },
     { icon: Users, title: t("cta.volunteer"), body: lang === "fr" ? "Mettez vos compétences au service d'une mission qui a du sens." : "Bring your skills to a mission that matters." },
     { icon: Handshake, title: t("cta.partner"), body: lang === "fr" ? "Institutions, entreprises, associations : construisons ensemble des projets durables." : "Institutions, companies, associations: let's build lasting projects together." },
     { icon: Mail, title: t("cta.contact"), body: lang === "fr" ? "Une question, un projet : écrivez-nous, nous vous répondrons personnellement." : "A question, a project: write to us, we'll answer personally." },

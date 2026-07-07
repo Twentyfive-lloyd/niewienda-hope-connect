@@ -3,7 +3,7 @@ import { BookOpen, ArrowRight } from "lucide-react";
 import { SiteLayout } from "@/components/site/Layout";
 import { SmartImage } from "@/components/site/SmartImage";
 import { useI18n } from "@/lib/i18n";
-import { topics } from "@/lib/diabetes-topics";
+import { topics, imageForTopic } from "@/lib/diabetes-topics";
 
 export const Route = createFileRoute("/comprendre-le-diabete/")({
   head: () => ({
@@ -54,10 +54,10 @@ function UnderstandHub() {
                 className="group flex flex-col rounded-3xl border border-border bg-background overflow-hidden hover:shadow-xl transition-shadow"
               >
                 <SmartImage
-                  src={`/images/img${12 + idx}.jpg`}
+                  src={imageForTopic(topic.slug, idx).src}
                   alt={topic.title[lang]}
                   ratio="aspect-[16/10]"
-                  label={`img${12 + idx}`}
+                  label={imageForTopic(topic.slug, idx).label}
                 />
                 <div className="p-7 flex-1 flex flex-col">
                   <div className="text-xs uppercase tracking-[0.22em] text-sage">0{idx + 1}</div>

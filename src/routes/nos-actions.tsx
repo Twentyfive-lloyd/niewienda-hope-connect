@@ -28,7 +28,7 @@ function ActionsPage() {
     <SiteLayout>
       {/* Hero banner */}
       <section className="relative -mt-20 h-[70vh] min-h-[500px] w-full overflow-hidden">
-        <img src="/images/img7.jpg" alt="" className="absolute inset-0 h-full w-full object-cover" />
+        <img src="/images/img11.jpg" alt="" className="absolute inset-0 h-full w-full object-cover" />
         <div className="absolute inset-0 hero-overlay" />
         <div className="relative z-10 flex h-full items-end pb-16 md:pb-24">
           <div className="container-site text-primary-foreground max-w-3xl">

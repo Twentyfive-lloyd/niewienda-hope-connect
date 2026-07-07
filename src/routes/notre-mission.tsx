@@ -20,15 +20,15 @@ function MissionPage() {
   const { t, lang } = useI18n();
 
   const timeline = lang === "fr" ? [
-    { year: "2019", title: "Naissance de l'idée", body: "Un collectif de soignants et de bénévoles se rassemble autour d'une conviction : agir contre le diabète en Afrique." },
-    { year: "2021", title: "Création officielle", body: "Niewienda Health e.V. est fondée en Allemagne et déploie ses premières missions." },
-    { year: "2023", title: "Premières campagnes de dépistage", body: "Des milliers de personnes bénéficient de nos campagnes gratuites sur le terrain." },
+    { year: "2024", title: "Naissance de l'idée", body: "Un collectif de soignants et de bénévoles se rassemble autour d'une conviction : agir contre le diabète en Afrique." },
     { year: "2025", title: "Un réseau qui grandit", body: "De nouveaux partenaires rejoignent notre mission dans plusieurs pays." },
+    { year: "2026", title: "Création officielle", body: "Niewienda Health e.V. est fondée en Allemagne et déploie ses premières missions." },
+    { year: "2026", title: "Les premières missions", body: "Premières campagnes de sensibilisation et de dépistage sur le terrain." },
   ] : [
-    { year: "2019", title: "The idea is born", body: "A group of caregivers and volunteers unite around one belief: act against diabetes in Africa." },
-    { year: "2021", title: "Official creation", body: "Niewienda Health e.V. is founded in Germany and delivers its first missions." },
-    { year: "2023", title: "First screening campaigns", body: "Thousands benefit from our free field campaigns." },
+    { year: "2024", title: "The idea is born", body: "A group of caregivers and volunteers unite around one belief: act against diabetes in Africa." },
     { year: "2025", title: "A growing network", body: "New partners join our mission across several countries." },
+    { year: "2026", title: "Official creation", body: "Niewienda Health e.V. is founded in Germany and delivers its first missions." },
+    { year: "2026", title: "First missions", body: "First awareness and screening campaigns on the ground." },
   ];
 
   const values = lang === "fr" ? [
@@ -97,8 +97,8 @@ function MissionPage() {
               </div>
             </div>
             <ol className="md:col-span-7 relative border-l border-border pl-8 space-y-12">
-              {timeline.map((step) => (
-                <li key={step.year} className="relative">
+              {timeline.map((step, idx) => (
+                <li key={`${step.year}-${idx}`} className="relative">
                   <span className="absolute -left-[41px] top-1 flex h-6 w-6 items-center justify-center rounded-full bg-sage text-white text-[10px]">•</span>
                   <div className="text-xs uppercase tracking-[0.22em] text-sage">{step.year}</div>
                   <h3 className="mt-2 font-display text-2xl text-navy">{step.title}</h3>

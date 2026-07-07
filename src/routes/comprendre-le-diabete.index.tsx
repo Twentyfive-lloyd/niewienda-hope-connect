@@ -28,8 +28,8 @@ function UnderstandHub() {
         <div className="relative z-10 flex h-full items-end pb-16">
           <div className="container-site text-primary-foreground max-w-3xl">
             <div className="text-xs uppercase tracking-[0.22em] text-white/80">{t("understand.hero.eyebrow")}</div>
-            <h1 className="mt-4 font-display text-5xl leading-[1.05] md:text-7xl">{t("understand.hero.title")}</h1>
-            <p className="mt-6 text-lg text-white/85">{t("understand.hero.subtitle")}</p>
+            <h1 className="mt-4 font-display text-5xl leading-[1.05] md:text-7xl xl:text-8xl">{t("understand.hero.title")}</h1>
+            <p className="mt-6 text-lg xl:text-xl text-white/85">{t("understand.hero.subtitle")}</p>
           </div>
         </div>
       </section>

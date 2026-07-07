@@ -66,7 +66,7 @@ function TopicPage() {
             <Link to="/comprendre-le-diabete" className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.22em] text-white/80 hover:text-white">
               <ArrowLeft className="h-3.5 w-3.5" /> {t("nav.understand")}
             </Link>
-            <h1 className="mt-5 font-display text-5xl leading-[1.05] md:text-6xl">{topic.title[lang]}</h1>
+            <h1 className="mt-5 font-display text-5xl leading-[1.05] md:text-6xl xl:text-7xl">{topic.title[lang]}</h1>
           </div>
         </div>
       </section>

@@ -24,7 +24,7 @@ function Index() {
                 <Sparkles className="h-3.5 w-3.5" />
                 {t("home.hero.eyebrow")}
               </div>
-              <h1 className="font-display text-5xl leading-[1.05] md:text-7xl">{t("home.hero.title")}</h1>
+              <h1 className="font-display text-5xl leading-[1.05] md:text-7xl xl:text-8xl">{t("home.hero.title")}</h1>
               <p className="mt-6 max-w-2xl text-lg text-white/85 md:text-xl">{t("home.hero.subtitle")}</p>
               <div className="mt-10 flex flex-wrap gap-4">
                 <Link to="/notre-mission" className="inline-flex items-center gap-2 rounded-full bg-white px-7 py-3.5 text-sm font-medium text-navy hover:bg-sage-soft transition-colors">
@@ -45,7 +45,7 @@ function Index() {
           <div>
             <div className="text-xs uppercase tracking-[0.22em] text-sage">{t("home.intro.eyebrow")}</div>
             <h2 className="mt-4 font-display text-4xl leading-tight text-navy md:text-5xl">{t("home.intro.title")}</h2>
-            <p className="mt-6 text-lg leading-relaxed text-foreground/75">{t("home.intro.body")}</p>
+            <p className="mt-6 text-lg xl:text-xl leading-relaxed text-foreground/75">{t("home.intro.body")}</p>
             <Link to="/notre-mission" className="mt-8 inline-flex items-center gap-2 text-sm font-medium text-navy hover:text-sage transition-colors">
               {t("cta.learnMore")} <ArrowRight className="h-4 w-4" />
             </Link>
@@ -61,7 +61,7 @@ function Index() {
           <div className="md:order-2 order-1">
             <div className="text-xs uppercase tracking-[0.22em] text-sage">{t("home.impact.eyebrow")}</div>
             <h2 className="mt-4 font-display text-4xl leading-tight text-navy md:text-5xl">{t("home.impact.title")}</h2>
-            <p className="mt-6 text-lg leading-relaxed text-foreground/75">{t("home.impact.body")}</p>
+            <p className="mt-6 text-lg xl:text-xl leading-relaxed text-foreground/75">{t("home.impact.body")}</p>
 
             <div className="mt-10 grid grid-cols-2 gap-6">
               {[

@@ -50,8 +50,8 @@ function MissionPage() {
         <div className="container-site pt-16 md:pt-24 pb-16">
           <div className="max-w-3xl">
             <div className="text-xs uppercase tracking-[0.22em] text-sage">{t("mission.hero.eyebrow")}</div>
-            <h1 className="mt-4 font-display text-5xl leading-[1.05] text-navy md:text-7xl">{t("mission.hero.title")}</h1>
-            <p className="mt-6 max-w-2xl text-lg text-foreground/75">{t("mission.hero.subtitle")}</p>
+            <h1 className="mt-4 font-display text-5xl leading-[1.05] text-navy md:text-7xl xl:text-8xl">{t("mission.hero.title")}</h1>
+            <p className="mt-6 max-w-2xl text-lg xl:text-xl text-foreground/75">{t("mission.hero.subtitle")}</p>
           </div>
         </div>
         <div className="container-site">
@@ -66,7 +66,7 @@ function MissionPage() {
             <div className="text-xs uppercase tracking-[0.22em] text-sage">01</div>
             <h2 className="mt-2 font-display text-4xl text-navy md:text-5xl">{t("mission.story.title")}</h2>
           </div>
-          <div className="md:col-span-7 md:pt-6 text-lg leading-relaxed text-foreground/75">
+          <div className="md:col-span-7 md:pt-6 text-lg xl:text-xl leading-relaxed text-foreground/75">
             {t("mission.story.body")}
           </div>
         </div>
@@ -79,7 +79,7 @@ function MissionPage() {
             <div className="text-xs uppercase tracking-[0.22em] text-sage">02</div>
             <h2 className="mt-2 font-display text-4xl text-navy md:text-5xl">{t("mission.vision.title")}</h2>
           </div>
-          <div className="md:col-span-7 md:pt-6 text-lg leading-relaxed text-foreground/75">
+          <div className="md:col-span-7 md:pt-6 text-lg xl:text-xl leading-relaxed text-foreground/75">
             {t("mission.vision.body")}
           </div>
         </div>
@@ -117,7 +117,7 @@ function MissionPage() {
           <div>
             <div className="text-xs uppercase tracking-[0.22em] text-sage">04</div>
             <h2 className="mt-2 font-display text-4xl text-navy md:text-5xl">{t("mission.values.title")}</h2>
-            <p className="mt-4 text-lg text-foreground/70">{t("mission.values.body")}</p>
+            <p className="mt-4 text-lg xl:text-xl text-foreground/70">{t("mission.values.body")}</p>
             <div className="mt-10 grid gap-5 sm:grid-cols-2">
               {values.map((v) => (
                 <div key={v.title} className="rounded-2xl border border-border bg-background p-6">
@@ -137,7 +137,7 @@ function MissionPage() {
           <div className="max-w-2xl">
             <div className="text-xs uppercase tracking-[0.22em] text-sage">05</div>
             <h2 className="mt-2 font-display text-4xl text-navy md:text-5xl">{t("mission.team.title")}</h2>
-            <p className="mt-4 text-lg text-foreground/70">{t("mission.team.body")}</p>
+            <p className="mt-4 text-lg xl:text-xl text-foreground/70">{t("mission.team.body")}</p>
           </div>
           <div className="mt-14 grid gap-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
             {[

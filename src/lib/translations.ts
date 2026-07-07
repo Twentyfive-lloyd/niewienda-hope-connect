@@ -181,6 +181,12 @@ const en: typeof fr = {
   "support.faq.title": "Frequently asked questions",
   "support.final.title": "Every gesture matters. Every life matters.",
   "support.final.body": "Join us today and become part of a lasting change.",
+  "partners.eyebrow": "Official partnership",
+  "partners.title": "Our partners",
+  "partners.body": "Niewienda Health e.V. and OZISS Cooperation join forces to develop innovative and sustainable solutions serving health, technology and communities.",
+  "partners.oziss.name": "OZISS Cooperation",
+  "partners.oziss.role": "Technology Solution Integration",
+  "partners.tagline": "Two organizations, one shared vision: building a better future together.",
 
   "footer.tagline": "Together for a future without diabetes in Africa.",
   "footer.explore": "Explore",

@@ -23,7 +23,7 @@ function SupportPage() {
   const [sent, setSent] = useState(false);
 
   const ways = [
-    { icon: HandCoins, title: t("cta.donate"), body: lang === "fr" ? "Chaque don finance directement nos campagnes de dépistage et notre suivi médical." : "Every donation directly funds our screening campaigns and medical follow-up." },
+    { icon: HandCoins, title: t("cta.donate"), body: lang === "fr" ? "Chaque don finance directement nos campagnes de dépistage et notre suivi médical." : "Every donation directly funds our screening campaigns and medical follow-up.", link: "https://gofund.me/41a559981", linkLabel: lang === "fr" ? "Contribuer à la cagnotte" : "Contribute to the fundraiser" },
     { icon: Users, title: t("cta.volunteer"), body: lang === "fr" ? "Mettez vos compétences au service d'une mission qui a du sens." : "Bring your skills to a mission that matters." },
     { icon: Handshake, title: t("cta.partner"), body: lang === "fr" ? "Institutions, entreprises, associations : construisons ensemble des projets durables." : "Institutions, companies, associations: let's build lasting projects together." },
     { icon: Mail, title: t("cta.contact"), body: lang === "fr" ? "Une question, un projet : écrivez-nous, nous vous répondrons personnellement." : "A question, a project: write to us, we'll answer personally." },
@@ -74,13 +74,27 @@ function SupportPage() {
             <h2 className="font-display text-4xl text-navy md:text-5xl">{t("support.ways.title")}</h2>
           </div>
           <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-            {ways.map((w) => (
-              <div key={w.title} className="rounded-3xl border border-border bg-background p-8 hover:border-sage transition-colors">
-                <w.icon className="h-6 w-6 text-sage" />
-                <h3 className="mt-5 font-display text-2xl text-navy">{w.title}</h3>
-                <p className="mt-3 text-sm text-foreground/65 leading-relaxed">{w.body}</p>
-              </div>
-            ))}
+            {ways.map((w) => {
+              const Card = (
+                <div className="rounded-3xl border border-border bg-background p-8 hover:border-sage transition-colors">
+                  <w.icon className="h-6 w-6 text-sage" />
+                  <h3 className="mt-5 font-display text-2xl text-navy">{w.title}</h3>
+                  <p className="mt-3 text-sm text-foreground/65 leading-relaxed">{w.body}</p>
+                  {w.link && (
+                    <div className="mt-4 inline-flex items-center gap-1.5 text-sm font-medium text-sage hover:text-navy transition-colors">
+                      {w.linkLabel} <ArrowRight className="h-3.5 w-3.5" />
+                    </div>
+                  )}
+                </div>
+              );
+              return w.link ? (
+                <a key={w.title} href={w.link} target="_blank" rel="noopener noreferrer">
+                  {Card}
+                </a>
+              ) : (
+                <div key={w.title}>{Card}</div>
+              );
+            })}
           </div>
         </div>
       </section>
@@ -154,7 +168,7 @@ function SupportPage() {
           <div className="container-site text-primary-foreground text-center">
             <h2 className="font-display text-4xl md:text-6xl max-w-4xl mx-auto">{t("support.final.title")}</h2>
             <p className="mt-5 text-lg text-white/85 max-w-2xl mx-auto">{t("support.final.body")}</p>
-            <a href="mailto:Niewienda.health@gmail.com" className="mt-10 inline-flex items-center gap-2 rounded-full bg-white px-8 py-4 text-sm font-medium text-navy hover:bg-sage-soft transition-colors">
+            <a href="https://gofund.me/41a559981" target="_blank" rel="noopener noreferrer" className="mt-10 inline-flex items-center gap-2 rounded-full bg-white px-8 py-4 text-sm font-medium text-navy hover:bg-sage-soft transition-colors">
               {t("cta.donate")} <ArrowRight className="h-4 w-4" />
             </a>
           </div>

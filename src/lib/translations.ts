@@ -102,8 +102,8 @@ const fr = {
   "partners.p3.body": "Renforcer les compétences et accompagner les talents de demain.",
   "partners.p4.title": "Développement communautaire",
   "partners.p4.body": "Soutenir des initiatives locales pour un développement inclusif et durable.",
-  "partners.page.eyebrow": "Partenariat officiel",
-  "partners.page.title": "Niewienda Health e.V. × OZISS Cooperation",
+  "partners.page.eyebrow": "Ils nous font confiance",
+  "partners.page.title": "Nos Partenaires",
   "partners.page.subtitle": "Ensemble pour un avenir plus sain, plus innovant, plus inclusif.",
   "partners.page.intro": "Niewienda Health e.V. et OZISS Cooperation unissent leurs expertises pour développer des solutions innovantes et durables au service de la santé, de la technologie et des communautés africaines.",
 
@@ -213,8 +213,8 @@ const en: typeof fr = {
   "partners.p3.body": "Strengthen skills and support the talents of tomorrow.",
   "partners.p4.title": "Community development",
   "partners.p4.body": "Support local initiatives for inclusive and sustainable development.",
-  "partners.page.eyebrow": "Official partnership",
-  "partners.page.title": "Niewienda Health e.V. × OZISS Cooperation",
+  "partners.page.eyebrow": "They trust us",
+  "partners.page.title": "Our Partners",
   "partners.page.subtitle": "Together for a healthier, more innovative and more inclusive future.",
   "partners.page.intro": "Niewienda Health e.V. and OZISS Cooperation combine their expertise to develop innovative and sustainable solutions serving health, technology and African communities.",
 

@@ -81,6 +81,38 @@ function Index() {
         </div>
       </section>
 
+      {/* PARTNERS */}
+      <section className="py-24 md:py-32">
+        <div className="container-site">
+          <div className="max-w-2xl">
+            <div className="text-xs uppercase tracking-[0.22em] text-sage">{t("partners.eyebrow")}</div>
+            <h2 className="mt-4 font-display text-4xl leading-tight text-navy md:text-5xl">{t("partners.title")}</h2>
+            <p className="mt-6 text-lg leading-relaxed text-foreground/75">{t("partners.body")}</p>
+          </div>
+
+          <div className="mt-14 grid gap-10 lg:grid-cols-5 lg:items-center">
+            <div className="lg:col-span-2">
+              <div className="rounded-3xl border border-border bg-cream p-10 flex flex-col items-center text-center">
+                <div className="flex items-center gap-8">
+                  <img src="/images/logo.jpg" alt="Niewienda Health e.V." className="h-20 w-20 rounded-full object-cover" />
+                  <HeartHandshake className="h-6 w-6 text-sage shrink-0" />
+                  <img src="/images/partner-oziss-logo.jpeg" alt="OZISS Cooperation" className="h-20 w-20 rounded-full object-contain bg-black p-2" />
+                </div>
+                <div className="mt-6 font-display text-xl text-navy">Niewienda Health e.V. × {t("partners.oziss.name")}</div>
+                <div className="mt-1 text-xs uppercase tracking-[0.18em] text-foreground/55">{t("partners.oziss.role")}</div>
+              </div>
+            </div>
+            <div className="lg:col-span-3">
+              <SmartImage src="/images/partnership-oziss.jpeg" alt="Partenariat officiel Niewienda Health e.V. × OZISS Cooperation" ratio="aspect-[4/5] md:aspect-[5/6]" className="rounded-3xl" label="partnership" />
+            </div>
+          </div>
+
+          <div className="mt-12 rounded-3xl bg-navy px-8 py-10 md:px-14 md:py-12 text-primary-foreground">
+            <p className="font-display text-2xl md:text-3xl leading-snug">{t("partners.tagline")}</p>
+          </div>
+        </div>
+      </section>
+
       {/* FINAL CTA */}
       <section className="py-24">
         <div className="container-site">

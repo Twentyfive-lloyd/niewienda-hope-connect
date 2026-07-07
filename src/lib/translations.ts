@@ -85,6 +85,12 @@ const fr = {
   "support.faq.title": "Questions fréquentes",
   "support.final.title": "Chaque geste compte. Chaque vie compte.",
   "support.final.body": "Rejoignez-nous aujourd'hui et devenez acteur d'un changement durable.",
+  "partners.eyebrow": "Partenariat officiel",
+  "partners.title": "Nos partenaires",
+  "partners.body": "Niewienda Health e.V. et OZISS Cooperation unissent leurs forces pour développer des solutions innovantes et durables au service de la santé, de la technologie et des communautés.",
+  "partners.oziss.name": "OZISS Cooperation",
+  "partners.oziss.role": "Technology Solution Integration",
+  "partners.tagline": "Deux organisations, une même vision : bâtir ensemble un avenir meilleur.",
 
   // Footer
   "footer.tagline": "Ensemble pour un avenir sans diabète en Afrique.",
@@ -175,6 +181,12 @@ const en: typeof fr = {
   "support.faq.title": "Frequently asked questions",
   "support.final.title": "Every gesture matters. Every life matters.",
   "support.final.body": "Join us today and become part of a lasting change.",
+  "partners.eyebrow": "Official partnership",
+  "partners.title": "Our partners",
+  "partners.body": "Niewienda Health e.V. and OZISS Cooperation join forces to develop innovative and sustainable solutions serving health, technology and communities.",
+  "partners.oziss.name": "OZISS Cooperation",
+  "partners.oziss.role": "Technology Solution Integration",
+  "partners.tagline": "Two organizations, one shared vision: building a better future together.",
 
   "footer.tagline": "Together for a future without diabetes in Africa.",
   "footer.explore": "Explore",

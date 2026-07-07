@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
-import { HandCoins, Users, Handshake, Mail, ArrowRight, Facebook, Instagram, Linkedin } from "lucide-react";
+import { HandCoins, Users, Handshake, Mail, ArrowRight, Heart, Facebook, Instagram, Linkedin } from "lucide-react";
 import { SiteLayout } from "@/components/site/Layout";
 import { SmartImage } from "@/components/site/SmartImage";
 import { useI18n } from "@/lib/i18n";

@@ -122,6 +122,7 @@ const en: typeof fr = {
   "nav.home": "Home",
   "nav.mission": "Our Mission",
   "nav.actions": "Our Actions",
+  "nav.partners": "Partners",
   "nav.understand": "Understanding Diabetes",
   "nav.support": "Support Us",
 

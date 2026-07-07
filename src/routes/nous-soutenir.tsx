@@ -75,14 +75,20 @@ function SupportPage() {
           </div>
           <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
             {ways.map((w) => {
+              const isDonate = w.link != null;
               const Card = (
-                <div className="rounded-3xl border border-border bg-background p-8 hover:border-sage transition-colors">
-                  <w.icon className="h-6 w-6 text-sage" />
+                <div className={`rounded-3xl border p-8 transition-colors ${isDonate ? 'border-sage bg-cream' : 'border-border bg-background hover:border-sage'}`}>
+                  {isDonate ? (
+                    <div className="mb-4 inline-flex items-center gap-1.5 rounded-full bg-sage/15 px-3 py-1 text-xs font-medium text-sage">
+                      <Heart className="h-3 w-3" /> {lang === 'fr' ? 'Prioritaire' : 'Priority'}
+                    </div>
+                  ) : null}
+                  <w.icon className={`h-6 w-6 ${isDonate ? 'text-navy' : 'text-sage'}`} />
                   <h3 className="mt-5 font-display text-2xl text-navy">{w.title}</h3>
                   <p className="mt-3 text-sm text-foreground/65 leading-relaxed">{w.body}</p>
                   {w.link && (
-                    <div className="mt-4 inline-flex items-center gap-1.5 text-sm font-medium text-sage hover:text-navy transition-colors">
-                      {w.linkLabel} <ArrowRight className="h-3.5 w-3.5" />
+                    <div className="mt-6 inline-flex items-center gap-2 rounded-full bg-sage px-6 py-3 text-sm font-medium text-white hover:bg-navy transition-colors shadow-sm">
+                      {w.linkLabel} <ArrowRight className="h-4 w-4" />
                     </div>
                   )}
                 </div>

@@ -3,7 +3,7 @@ import { ArrowLeft, ArrowRight, CheckCircle2, Info } from "lucide-react";
 import { SiteLayout } from "@/components/site/Layout";
 import { SmartImage } from "@/components/site/SmartImage";
 import { useI18n } from "@/lib/i18n";
-import { topics, bannerFor } from "@/lib/diabetes-topics";
+import { topics } from "@/lib/diabetes-topics";
 
 export const Route = createFileRoute("/comprendre-le-diabete/$topic")({
   loader: ({ params }) => {
@@ -47,10 +47,10 @@ export const Route = createFileRoute("/comprendre-le-diabete/$topic")({
 function TopicPage() {
   const { slug } = Route.useLoaderData();
   const { lang, t } = useI18n();
-  const topic = topics.find((x) => x.slug === slug)!;
-  const banner = bannerFor(topic.category);
-  const sections = topic.sections[lang];
   const currentIdx = topics.findIndex((x) => x.slug === slug);
+  const topic = topics[currentIdx];
+  const banner = { src: `/images/img${12 + currentIdx}.jpg`, label: `img${12 + currentIdx}` };
+  const sections = topic.sections[lang];
   const prev = topics[currentIdx - 1];
   const next = topics[currentIdx + 1];
 

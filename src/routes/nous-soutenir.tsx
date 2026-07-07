@@ -55,7 +55,7 @@ function SupportPage() {
     <SiteLayout>
       {/* Hero */}
       <section className="relative -mt-20 h-[70vh] min-h-[500px] w-full overflow-hidden">
-        <img src="/images/img15.jpg" alt="" className="absolute inset-0 h-full w-full object-cover" onError={(e) => (e.currentTarget.style.display = "none")} />
+        <img src="/images/img21.jpg" alt="" className="absolute inset-0 h-full w-full object-cover" onError={(e) => (e.currentTarget.style.display = "none")} />
         <div className="absolute inset-0 bg-gradient-to-br from-navy to-sage" />
         <div className="absolute inset-0 hero-overlay" />
         <div className="relative z-10 flex h-full items-end pb-16 md:pb-24">

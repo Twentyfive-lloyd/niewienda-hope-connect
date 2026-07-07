@@ -23,7 +23,7 @@ function UnderstandHub() {
     <SiteLayout>
       {/* Hero */}
       <section className="relative -mt-20 h-[65vh] min-h-[460px] w-full overflow-hidden">
-        <img src="/images/img12.jpg" alt="" className="absolute inset-0 h-full w-full object-cover" />
+        <img src="/images/img20.jpg" alt="" className="absolute inset-0 h-full w-full object-cover" />
         <div className="absolute inset-0 hero-overlay" />
         <div className="relative z-10 flex h-full items-end pb-16">
           <div className="container-site text-primary-foreground max-w-3xl">
@@ -54,10 +54,10 @@ function UnderstandHub() {
                 className="group flex flex-col rounded-3xl border border-border bg-background overflow-hidden hover:shadow-xl transition-shadow"
               >
                 <SmartImage
-                  src={topic.category === "prevention" ? "/images/img13.jpg" : topic.category === "practice" ? "/images/img14.jpg" : "/images/img12.jpg"}
+                  src={`/images/img${12 + idx}.jpg`}
                   alt={topic.title[lang]}
                   ratio="aspect-[16/10]"
-                  label={topic.category === "prevention" ? "img13" : topic.category === "practice" ? "img14" : "img12"}
+                  label={`img${12 + idx}`}
                 />
                 <div className="p-7 flex-1 flex flex-col">
                   <div className="text-xs uppercase tracking-[0.22em] text-sage">0{idx + 1}</div>

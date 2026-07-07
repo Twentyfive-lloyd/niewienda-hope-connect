@@ -10,11 +10,17 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as NotreMissionRouteImport } from './routes/notre-mission'
+import { Route as NosActionsRouteImport } from './routes/nos-actions'
 import { Route as IndexRouteImport } from './routes/index'
 
 const NotreMissionRoute = NotreMissionRouteImport.update({
   id: '/notre-mission',
   path: '/notre-mission',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const NosActionsRoute = NosActionsRouteImport.update({
+  id: '/nos-actions',
+  path: '/nos-actions',
   getParentRoute: () => rootRouteImport,
 } as any)
 const IndexRoute = IndexRouteImport.update({
@@ -25,27 +31,31 @@ const IndexRoute = IndexRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/nos-actions': typeof NosActionsRoute
   '/notre-mission': typeof NotreMissionRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/nos-actions': typeof NosActionsRoute
   '/notre-mission': typeof NotreMissionRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/nos-actions': typeof NosActionsRoute
   '/notre-mission': typeof NotreMissionRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/notre-mission'
+  fullPaths: '/' | '/nos-actions' | '/notre-mission'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/notre-mission'
-  id: '__root__' | '/' | '/notre-mission'
+  to: '/' | '/nos-actions' | '/notre-mission'
+  id: '__root__' | '/' | '/nos-actions' | '/notre-mission'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  NosActionsRoute: typeof NosActionsRoute
   NotreMissionRoute: typeof NotreMissionRoute
 }
 
@@ -56,6 +66,13 @@ declare module '@tanstack/react-router' {
       path: '/notre-mission'
       fullPath: '/notre-mission'
       preLoaderRoute: typeof NotreMissionRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/nos-actions': {
+      id: '/nos-actions'
+      path: '/nos-actions'
+      fullPath: '/nos-actions'
+      preLoaderRoute: typeof NosActionsRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/': {
@@ -70,6 +87,7 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  NosActionsRoute: NosActionsRoute,
   NotreMissionRoute: NotreMissionRoute,
 }
 export const routeTree = rootRouteImport

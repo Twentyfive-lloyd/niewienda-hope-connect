@@ -140,16 +140,21 @@ function MissionPage() {
             <p className="mt-4 text-lg text-foreground/70">{t("mission.team.body")}</p>
           </div>
           <div className="mt-14 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
-            {[1, 2, 3, 4].map((i) => (
+            {[
+              { fr: "Niewienda A.", en: "Niewienda A.", roleFr: "Présidente de l'association:", roleEn: "President of the association:" },
+              { fr: "Erika Nouetagni", en: "Erika Nouetagni", roleFr: "Présidente par interim", roleEn: "Interim President" },
+              { fr: "Zianie Ouethy", en: "Zianie Ouethy", roleFr: "Caissière", roleEn: "Treasurer" },
+              { fr: "Kevin Njiokeng", en: "Kevin Njiokeng", roleFr: "Secrétaire", roleEn: "Secretary" }
+            ].map((member, i) => (
               <div key={i} className="group">
                 <div className="aspect-[4/5] overflow-hidden rounded-2xl bg-gradient-to-br from-sage-soft to-muted flex items-end justify-center">
                   <div className="mb-6 h-20 w-20 rounded-full bg-navy/10 flex items-center justify-center font-display text-2xl text-navy">
-                    {String.fromCharCode(64 + i)}
+                    {member.fr.charAt(0)}
                   </div>
                 </div>
                 <div className="mt-4">
-                  <div className="font-display text-xl text-navy">{lang === "fr" ? "Prénom Nom" : "First Last"}</div>
-                  <div className="text-sm text-foreground/60">{lang === "fr" ? "Rôle / Fonction" : "Role / Function"}</div>
+                  <div className="font-display text-xl text-navy">{lang === "fr" ? member.fr : member.en}</div>
+                  <div className="text-sm text-foreground/60">{lang === "fr" ? member.roleFr : member.roleEn}</div>
                 </div>
               </div>
             ))}

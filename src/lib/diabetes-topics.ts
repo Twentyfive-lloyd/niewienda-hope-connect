@@ -247,3 +247,13 @@ export function bannerFor(category: Topic["category"]): { src: string; label: st
       return { src: "/images/img12.jpg", label: "img12" };
   }
 }
+
+const topicImageOverrides: Record<string, { src: string; label: string }> = {
+  "comprendre-le-diabete": { src: "/images/img13.jpg", label: "img13" },
+  "faq": { src: "/images/img25.png", label: "img25" },
+};
+
+export function imageForTopic(slug: string, idx: number): { src: string; label: string } {
+  if (topicImageOverrides[slug]) return topicImageOverrides[slug];
+  return { src: `/images/img${12 + idx}.jpg`, label: `img${12 + idx}` };
+}

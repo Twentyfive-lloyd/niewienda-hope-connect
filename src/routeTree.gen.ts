@@ -12,6 +12,7 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as NotreMissionRouteImport } from './routes/notre-mission'
 import { Route as NosActionsRouteImport } from './routes/nos-actions'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as ComprendreLeDiabeteIndexRouteImport } from './routes/comprendre-le-diabete.index'
 
 const NotreMissionRoute = NotreMissionRouteImport.update({
   id: '/notre-mission',
@@ -28,35 +29,50 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ComprendreLeDiabeteIndexRoute =
+  ComprendreLeDiabeteIndexRouteImport.update({
+    id: '/comprendre-le-diabete/',
+    path: '/comprendre-le-diabete/',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/nos-actions': typeof NosActionsRoute
   '/notre-mission': typeof NotreMissionRoute
+  '/comprendre-le-diabete/': typeof ComprendreLeDiabeteIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/nos-actions': typeof NosActionsRoute
   '/notre-mission': typeof NotreMissionRoute
+  '/comprendre-le-diabete': typeof ComprendreLeDiabeteIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/nos-actions': typeof NosActionsRoute
   '/notre-mission': typeof NotreMissionRoute
+  '/comprendre-le-diabete/': typeof ComprendreLeDiabeteIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/nos-actions' | '/notre-mission'
+  fullPaths: '/' | '/nos-actions' | '/notre-mission' | '/comprendre-le-diabete/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/nos-actions' | '/notre-mission'
-  id: '__root__' | '/' | '/nos-actions' | '/notre-mission'
+  to: '/' | '/nos-actions' | '/notre-mission' | '/comprendre-le-diabete'
+  id:
+    | '__root__'
+    | '/'
+    | '/nos-actions'
+    | '/notre-mission'
+    | '/comprendre-le-diabete/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   NosActionsRoute: typeof NosActionsRoute
   NotreMissionRoute: typeof NotreMissionRoute
+  ComprendreLeDiabeteIndexRoute: typeof ComprendreLeDiabeteIndexRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -82,6 +98,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/comprendre-le-diabete/': {
+      id: '/comprendre-le-diabete/'
+      path: '/comprendre-le-diabete'
+      fullPath: '/comprendre-le-diabete/'
+      preLoaderRoute: typeof ComprendreLeDiabeteIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -89,6 +112,7 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   NosActionsRoute: NosActionsRoute,
   NotreMissionRoute: NotreMissionRoute,
+  ComprendreLeDiabeteIndexRoute: ComprendreLeDiabeteIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

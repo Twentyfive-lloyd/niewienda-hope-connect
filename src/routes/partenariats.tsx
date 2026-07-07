@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, Stethoscope, Cpu, GraduationCap, HandHeart, HeartHandshake } from "lucide-react";
 import { SiteLayout } from "@/components/site/Layout";
 import { useI18n } from "@/lib/i18n";
+import agroMilleniumLogo from "@/assets/agro-millenium-logo.png.asset.json";
 
 export const Route = createFileRoute("/partenariats")({
   component: PartenariatsPage,
@@ -38,17 +39,26 @@ function PartenariatsPage() {
             <p className="mt-6 text-lg text-foreground/75">{t("partners.page.subtitle")}</p>
           </div>
 
-          <div className="mt-12 flex w-full max-w-2xl mx-auto items-center justify-center gap-6 md:gap-10">
-            <div className="flex h-24 w-24 items-center justify-center rounded-full border border-border bg-background md:h-28 md:w-28">
-              <img src="/images/logo.jpg" alt="Niewienda Health e.V." className="h-20 w-20 rounded-full object-cover md:h-24 md:w-24" />
+          <div className="mt-12 flex flex-wrap w-full max-w-3xl mx-auto items-center justify-center gap-6 md:gap-8">
+            <div className="flex flex-col items-center gap-3">
+              <div className="flex h-24 w-24 items-center justify-center rounded-full border border-border bg-background md:h-28 md:w-28">
+                <img src="/images/logo.jpg" alt="Niewienda Health e.V." className="h-20 w-20 rounded-full object-cover md:h-24 md:w-24" />
+              </div>
+              <div className="text-xs uppercase tracking-[0.18em] text-navy/70">Niewienda Health e.V.</div>
             </div>
-            <div className="flex flex-1 items-center gap-3">
-              <div className="h-px flex-1 bg-border" />
-              <HeartHandshake className="h-5 w-5 text-sage" />
-              <div className="h-px flex-1 bg-border" />
+            <HeartHandshake className="h-5 w-5 text-sage" />
+            <div className="flex flex-col items-center gap-3">
+              <div className="flex h-24 w-24 items-center justify-center rounded-full border border-border bg-black md:h-28 md:w-28">
+                <img src="/images/partner-oziss-logo.jpeg" alt="OZISS Cooperation" className="h-20 w-20 rounded-full object-contain md:h-24 md:w-24" />
+              </div>
+              <div className="text-xs uppercase tracking-[0.18em] text-navy/70">OZISS Cooperation</div>
             </div>
-            <div className="flex h-24 w-24 items-center justify-center rounded-full border border-border bg-black md:h-28 md:w-28">
-              <img src="/images/partner-oziss-logo.jpeg" alt="OZISS Cooperation" className="h-20 w-20 rounded-full object-contain md:h-24 md:w-24" />
+            <HeartHandshake className="h-5 w-5 text-sage" />
+            <div className="flex flex-col items-center gap-3">
+              <div className="flex h-24 w-24 items-center justify-center rounded-full border border-border bg-background md:h-28 md:w-28">
+                <img src={agroMilleniumLogo.url} alt="Agro Millenium Group" className="h-20 w-20 rounded-full object-contain md:h-24 md:w-24" />
+              </div>
+              <div className="text-xs uppercase tracking-[0.18em] text-navy/70">Agro Millenium Group</div>
             </div>
           </div>
         </div>

@@ -81,10 +81,14 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { title: "Niewienda Health e.V. — Ensemble contre le diabète en Afrique" },
       { name: "description", content: "Niewienda Health e.V. est une association humanitaire qui sensibilise, dépiste et accompagne les personnes vivant avec le diabète en Afrique." },
       { name: "author", content: "Niewienda Health e.V." },
-      { property: "og:title", content: "Niewienda Health e.V." },
-      { property: "og:description", content: "Ensemble contre le diabète en Afrique — sensibilisation, dépistage, accompagnement." },
+      { property: "og:title", content: "Niewienda Health e.V. — Ensemble contre le diabète en Afrique" },
+      { property: "og:description", content: "Niewienda Health e.V. est une association humanitaire qui sensibilise, dépiste et accompagne les personnes vivant avec le diabète en Afrique." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Niewienda Health e.V. — Ensemble contre le diabète en Afrique" },
+      { name: "twitter:description", content: "Niewienda Health e.V. est une association humanitaire qui sensibilise, dépiste et accompagne les personnes vivant avec le diabète en Afrique." },
+      { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/xHra4Hijk8WhW1aDOvBuzu7GUe93/social-images/social-1783434806983-img26.webp" },
+      { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/xHra4Hijk8WhW1aDOvBuzu7GUe93/social-images/social-1783434806983-img26.webp" },
     ],
     links: [
       {

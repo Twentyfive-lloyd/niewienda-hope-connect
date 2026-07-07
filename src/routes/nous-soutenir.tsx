@@ -168,7 +168,7 @@ function SupportPage() {
           <div className="container-site text-primary-foreground text-center">
             <h2 className="font-display text-4xl md:text-6xl max-w-4xl mx-auto">{t("support.final.title")}</h2>
             <p className="mt-5 text-lg text-white/85 max-w-2xl mx-auto">{t("support.final.body")}</p>
-            <a href="mailto:Niewienda.health@gmail.com" className="mt-10 inline-flex items-center gap-2 rounded-full bg-white px-8 py-4 text-sm font-medium text-navy hover:bg-sage-soft transition-colors">
+            <a href="https://gofund.me/41a559981" target="_blank" rel="noopener noreferrer" className="mt-10 inline-flex items-center gap-2 rounded-full bg-white px-8 py-4 text-sm font-medium text-navy hover:bg-sage-soft transition-colors">
               {t("cta.donate")} <ArrowRight className="h-4 w-4" />
             </a>
           </div>

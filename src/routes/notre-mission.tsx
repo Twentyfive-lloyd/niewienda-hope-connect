@@ -55,7 +55,7 @@ function MissionPage() {
           </div>
         </div>
         <div className="container-site">
-          <SmartImage src="/images/img22.jpg" alt="Mission" ratio="aspect-[16/7]" className="rounded-3xl" label="img22" priority />
+          <SmartImage src="/images/img50.jpg" alt="Mission" ratio="aspect-[16/7]" className="rounded-3xl" label="img50" priority />
         </div>
       </section>
 

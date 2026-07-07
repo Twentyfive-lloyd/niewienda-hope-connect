@@ -9,6 +9,7 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as PartenariatsRouteImport } from './routes/partenariats'
 import { Route as NousSoutenirRouteImport } from './routes/nous-soutenir'
 import { Route as NotreMissionRouteImport } from './routes/notre-mission'
 import { Route as NosActionsRouteImport } from './routes/nos-actions'
@@ -16,6 +17,11 @@ import { Route as IndexRouteImport } from './routes/index'
 import { Route as ComprendreLeDiabeteIndexRouteImport } from './routes/comprendre-le-diabete.index'
 import { Route as ComprendreLeDiabeteTopicRouteImport } from './routes/comprendre-le-diabete.$topic'
 
+const PartenariatsRoute = PartenariatsRouteImport.update({
+  id: '/partenariats',
+  path: '/partenariats',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const NousSoutenirRoute = NousSoutenirRouteImport.update({
   id: '/nous-soutenir',
   path: '/nous-soutenir',
@@ -54,6 +60,7 @@ export interface FileRoutesByFullPath {
   '/nos-actions': typeof NosActionsRoute
   '/notre-mission': typeof NotreMissionRoute
   '/nous-soutenir': typeof NousSoutenirRoute
+  '/partenariats': typeof PartenariatsRoute
   '/comprendre-le-diabete/$topic': typeof ComprendreLeDiabeteTopicRoute
   '/comprendre-le-diabete/': typeof ComprendreLeDiabeteIndexRoute
 }
@@ -62,6 +69,7 @@ export interface FileRoutesByTo {
   '/nos-actions': typeof NosActionsRoute
   '/notre-mission': typeof NotreMissionRoute
   '/nous-soutenir': typeof NousSoutenirRoute
+  '/partenariats': typeof PartenariatsRoute
   '/comprendre-le-diabete/$topic': typeof ComprendreLeDiabeteTopicRoute
   '/comprendre-le-diabete': typeof ComprendreLeDiabeteIndexRoute
 }
@@ -71,6 +79,7 @@ export interface FileRoutesById {
   '/nos-actions': typeof NosActionsRoute
   '/notre-mission': typeof NotreMissionRoute
   '/nous-soutenir': typeof NousSoutenirRoute
+  '/partenariats': typeof PartenariatsRoute
   '/comprendre-le-diabete/$topic': typeof ComprendreLeDiabeteTopicRoute
   '/comprendre-le-diabete/': typeof ComprendreLeDiabeteIndexRoute
 }
@@ -81,6 +90,7 @@ export interface FileRouteTypes {
     | '/nos-actions'
     | '/notre-mission'
     | '/nous-soutenir'
+    | '/partenariats'
     | '/comprendre-le-diabete/$topic'
     | '/comprendre-le-diabete/'
   fileRoutesByTo: FileRoutesByTo
@@ -89,6 +99,7 @@ export interface FileRouteTypes {
     | '/nos-actions'
     | '/notre-mission'
     | '/nous-soutenir'
+    | '/partenariats'
     | '/comprendre-le-diabete/$topic'
     | '/comprendre-le-diabete'
   id:
@@ -97,6 +108,7 @@ export interface FileRouteTypes {
     | '/nos-actions'
     | '/notre-mission'
     | '/nous-soutenir'
+    | '/partenariats'
     | '/comprendre-le-diabete/$topic'
     | '/comprendre-le-diabete/'
   fileRoutesById: FileRoutesById
@@ -106,12 +118,20 @@ export interface RootRouteChildren {
   NosActionsRoute: typeof NosActionsRoute
   NotreMissionRoute: typeof NotreMissionRoute
   NousSoutenirRoute: typeof NousSoutenirRoute
+  PartenariatsRoute: typeof PartenariatsRoute
   ComprendreLeDiabeteTopicRoute: typeof ComprendreLeDiabeteTopicRoute
   ComprendreLeDiabeteIndexRoute: typeof ComprendreLeDiabeteIndexRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/partenariats': {
+      id: '/partenariats'
+      path: '/partenariats'
+      fullPath: '/partenariats'
+      preLoaderRoute: typeof PartenariatsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/nous-soutenir': {
       id: '/nous-soutenir'
       path: '/nous-soutenir'
@@ -162,6 +182,7 @@ const rootRouteChildren: RootRouteChildren = {
   NosActionsRoute: NosActionsRoute,
   NotreMissionRoute: NotreMissionRoute,
   NousSoutenirRoute: NousSoutenirRoute,
+  PartenariatsRoute: PartenariatsRoute,
   ComprendreLeDiabeteTopicRoute: ComprendreLeDiabeteTopicRoute,
   ComprendreLeDiabeteIndexRoute: ComprendreLeDiabeteIndexRoute,
 }

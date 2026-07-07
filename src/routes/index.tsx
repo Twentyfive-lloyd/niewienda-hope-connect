@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Link } from "@tanstack/react-router";
-import { ArrowRight, HeartHandshake, Activity, Users, Globe2, Sparkles } from "lucide-react";
+import { ArrowRight, HeartHandshake, Activity, Users, Globe2, Sparkles, Stethoscope, Cpu, GraduationCap, HandHeart } from "lucide-react";
 import { SiteLayout } from "@/components/site/Layout";
 import { SmartImage } from "@/components/site/SmartImage";
 import { useI18n } from "@/lib/i18n";
@@ -81,38 +81,68 @@ function Index() {
         </div>
       </section>
 
-      {/* PARTNERS */}
-      <section className="py-24 md:py-32">
+      {/* PARTNERS — sober section, placed before the final CTA (Nous soutenir) */}
+      <section className="bg-background py-24 md:py-32">
         <div className="container-site">
-          <div className="max-w-2xl">
+          <div className="mx-auto max-w-3xl text-center">
             <div className="text-xs uppercase tracking-[0.22em] text-sage">{t("partners.eyebrow")}</div>
             <h2 className="mt-4 font-display text-4xl leading-tight text-navy md:text-5xl">{t("partners.title")}</h2>
-            <p className="mt-6 text-lg leading-relaxed text-foreground/75">{t("partners.body")}</p>
+            <p className="mt-6 text-lg leading-relaxed text-foreground/70">{t("partners.body")}</p>
           </div>
 
-          <div className="mt-14 grid gap-10 lg:grid-cols-5 lg:items-center">
-            <div className="lg:col-span-2">
-              <div className="rounded-3xl border border-border bg-cream p-10 flex flex-col items-center text-center">
-                <div className="flex items-center gap-8">
-                  <img src="/images/logo.jpg" alt="Niewienda Health e.V." className="h-20 w-20 rounded-full object-cover" />
-                  <HeartHandshake className="h-6 w-6 text-sage shrink-0" />
-                  <img src="/images/partner-oziss-logo.jpeg" alt="OZISS Cooperation" className="h-20 w-20 rounded-full object-contain bg-black p-2" />
+          {/* Logos côte à côte, reliés par un trait fin + icône */}
+          <div className="mt-14 flex flex-col items-center">
+            <div className="flex w-full max-w-2xl items-center justify-center gap-6 md:gap-10">
+              <div className="flex flex-col items-center gap-3">
+                <div className="flex h-24 w-24 items-center justify-center rounded-full border border-border bg-background md:h-28 md:w-28">
+                  <img src="/images/logo.jpg" alt="Niewienda Health e.V." className="h-20 w-20 rounded-full object-cover md:h-24 md:w-24" />
                 </div>
-                <div className="mt-6 font-display text-xl text-navy">Niewienda Health e.V. × {t("partners.oziss.name")}</div>
-                <div className="mt-1 text-xs uppercase tracking-[0.18em] text-foreground/55">{t("partners.oziss.role")}</div>
+                <div className="text-xs uppercase tracking-[0.18em] text-navy/70">Niewienda Health e.V.</div>
+              </div>
+
+              <div className="flex flex-1 items-center gap-3">
+                <div className="h-px flex-1 bg-border" />
+                <HeartHandshake className="h-5 w-5 text-sage" />
+                <div className="h-px flex-1 bg-border" />
+              </div>
+
+              <div className="flex flex-col items-center gap-3">
+                <div className="flex h-24 w-24 items-center justify-center rounded-full border border-border bg-black md:h-28 md:w-28">
+                  <img src="/images/partner-oziss-logo.jpeg" alt="OZISS Cooperation" className="h-20 w-20 rounded-full object-contain md:h-24 md:w-24" />
+                </div>
+                <div className="text-xs uppercase tracking-[0.18em] text-navy/70">OZISS Cooperation</div>
               </div>
             </div>
-            <div className="lg:col-span-3">
-              <img
-                src="/images/partnership-oziss.jpeg"
-                alt="Partenariat officiel Niewienda Health e.V. × OZISS Cooperation"
-                className="w-full h-auto rounded-3xl shadow-sm"
-              />
-            </div>
+
+            <Link
+              to="/partenariats"
+              className="mt-10 inline-flex items-center gap-2 rounded-full border border-navy/15 bg-background px-6 py-3 text-sm font-medium text-navy hover:border-navy/30 hover:bg-cream transition-colors"
+            >
+              {t("partners.cta")} <ArrowRight className="h-4 w-4" />
+            </Link>
           </div>
 
-          <div className="mt-12 rounded-3xl bg-navy px-8 py-10 md:px-14 md:py-12 text-primary-foreground">
-            <p className="font-display text-2xl md:text-3xl leading-snug">{t("partners.tagline")}</p>
+          {/* Piliers de collaboration */}
+          <div className="mt-20">
+            <div className="mx-auto max-w-2xl text-center">
+              <div className="text-xs uppercase tracking-[0.22em] text-sage">{t("partners.pillars.title")}</div>
+            </div>
+            <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+              {[
+                { icon: Stethoscope, title: t("partners.p1.title"), body: t("partners.p1.body") },
+                { icon: Cpu, title: t("partners.p2.title"), body: t("partners.p2.body") },
+                { icon: GraduationCap, title: t("partners.p3.title"), body: t("partners.p3.body") },
+                { icon: HandHeart, title: t("partners.p4.title"), body: t("partners.p4.body") },
+              ].map((p) => (
+                <div key={p.title} className="rounded-3xl border border-border bg-background p-7 hover:border-sage transition-colors">
+                  <div className="flex h-11 w-11 items-center justify-center rounded-full bg-sage-soft">
+                    <p.icon className="h-5 w-5 text-sage" />
+                  </div>
+                  <h3 className="mt-5 font-display text-xl text-navy">{p.title}</h3>
+                  <p className="mt-2 text-sm text-foreground/65 leading-relaxed">{p.body}</p>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>

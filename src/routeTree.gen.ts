@@ -13,6 +13,7 @@ import { Route as NotreMissionRouteImport } from './routes/notre-mission'
 import { Route as NosActionsRouteImport } from './routes/nos-actions'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as ComprendreLeDiabeteIndexRouteImport } from './routes/comprendre-le-diabete.index'
+import { Route as ComprendreLeDiabeteTopicRouteImport } from './routes/comprendre-le-diabete.$topic'
 
 const NotreMissionRoute = NotreMissionRouteImport.update({
   id: '/notre-mission',
@@ -35,17 +36,25 @@ const ComprendreLeDiabeteIndexRoute =
     path: '/comprendre-le-diabete/',
     getParentRoute: () => rootRouteImport,
   } as any)
+const ComprendreLeDiabeteTopicRoute =
+  ComprendreLeDiabeteTopicRouteImport.update({
+    id: '/comprendre-le-diabete/$topic',
+    path: '/comprendre-le-diabete/$topic',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/nos-actions': typeof NosActionsRoute
   '/notre-mission': typeof NotreMissionRoute
+  '/comprendre-le-diabete/$topic': typeof ComprendreLeDiabeteTopicRoute
   '/comprendre-le-diabete/': typeof ComprendreLeDiabeteIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/nos-actions': typeof NosActionsRoute
   '/notre-mission': typeof NotreMissionRoute
+  '/comprendre-le-diabete/$topic': typeof ComprendreLeDiabeteTopicRoute
   '/comprendre-le-diabete': typeof ComprendreLeDiabeteIndexRoute
 }
 export interface FileRoutesById {
@@ -53,18 +62,30 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/nos-actions': typeof NosActionsRoute
   '/notre-mission': typeof NotreMissionRoute
+  '/comprendre-le-diabete/$topic': typeof ComprendreLeDiabeteTopicRoute
   '/comprendre-le-diabete/': typeof ComprendreLeDiabeteIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/nos-actions' | '/notre-mission' | '/comprendre-le-diabete/'
+  fullPaths:
+    | '/'
+    | '/nos-actions'
+    | '/notre-mission'
+    | '/comprendre-le-diabete/$topic'
+    | '/comprendre-le-diabete/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/nos-actions' | '/notre-mission' | '/comprendre-le-diabete'
+  to:
+    | '/'
+    | '/nos-actions'
+    | '/notre-mission'
+    | '/comprendre-le-diabete/$topic'
+    | '/comprendre-le-diabete'
   id:
     | '__root__'
     | '/'
     | '/nos-actions'
     | '/notre-mission'
+    | '/comprendre-le-diabete/$topic'
     | '/comprendre-le-diabete/'
   fileRoutesById: FileRoutesById
 }
@@ -72,6 +93,7 @@ export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   NosActionsRoute: typeof NosActionsRoute
   NotreMissionRoute: typeof NotreMissionRoute
+  ComprendreLeDiabeteTopicRoute: typeof ComprendreLeDiabeteTopicRoute
   ComprendreLeDiabeteIndexRoute: typeof ComprendreLeDiabeteIndexRoute
 }
 
@@ -105,6 +127,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ComprendreLeDiabeteIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/comprendre-le-diabete/$topic': {
+      id: '/comprendre-le-diabete/$topic'
+      path: '/comprendre-le-diabete/$topic'
+      fullPath: '/comprendre-le-diabete/$topic'
+      preLoaderRoute: typeof ComprendreLeDiabeteTopicRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -112,6 +141,7 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   NosActionsRoute: NosActionsRoute,
   NotreMissionRoute: NotreMissionRoute,
+  ComprendreLeDiabeteTopicRoute: ComprendreLeDiabeteTopicRoute,
   ComprendreLeDiabeteIndexRoute: ComprendreLeDiabeteIndexRoute,
 }
 export const routeTree = rootRouteImport

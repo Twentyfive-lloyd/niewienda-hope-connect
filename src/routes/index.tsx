@@ -103,7 +103,11 @@ function Index() {
               </div>
             </div>
             <div className="lg:col-span-3">
-              <SmartImage src="/images/partnership-oziss.jpeg" alt="Partenariat officiel Niewienda Health e.V. × OZISS Cooperation" ratio="aspect-[4/5] md:aspect-[5/6]" className="rounded-3xl" label="partnership" />
+              <img
+                src="/images/partnership-oziss.jpeg"
+                alt="Partenariat officiel Niewienda Health e.V. × OZISS Cooperation"
+                className="w-full h-auto rounded-3xl shadow-sm"
+              />
             </div>
           </div>
 

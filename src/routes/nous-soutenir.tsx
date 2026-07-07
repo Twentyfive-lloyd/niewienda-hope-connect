@@ -59,10 +59,10 @@ function SupportPage() {
         <div className="absolute inset-0 bg-gradient-to-br from-navy/70 to-sage/50" />
         <div className="absolute inset-0 bg-gradient-to-t from-navy/80 via-navy/30 to-transparent" />
         <div className="relative z-10 flex h-full items-end pb-16 md:pb-24">
-          <div className="container-site text-primary-foreground max-w-3xl xl:max-w-5xl">
+          <div className="container-site text-primary-foreground max-w-3xl">
             <div className="text-xs uppercase tracking-[0.22em] text-white/80">{t("support.hero.eyebrow")}</div>
-            <h1 className="mt-4 font-display text-5xl leading-[1.05] md:text-7xl xl:text-8xl">{t("support.hero.title")}</h1>
-            <p className="mt-6 text-lg xl:text-xl text-white/85">{t("support.hero.subtitle")}</p>
+            <h1 className="mt-4 font-display text-5xl leading-[1.05] md:text-7xl">{t("support.hero.title")}</h1>
+            <p className="mt-6 text-lg text-white/85">{t("support.hero.subtitle")}</p>
           </div>
         </div>
       </section>
@@ -70,7 +70,7 @@ function SupportPage() {
       {/* Ways */}
       <section className="py-24 md:py-32">
         <div className="container-site">
-          <div className="max-w-2xl xl:max-w-4xl">
+          <div className="max-w-2xl">
             <h2 className="font-display text-4xl text-navy md:text-5xl">{t("support.ways.title")}</h2>
           </div>
           <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
@@ -105,7 +105,7 @@ function SupportPage() {
         <div className="container-site grid gap-16 lg:grid-cols-2">
           <div>
             <h2 className="font-display text-4xl text-navy md:text-5xl">{t("support.contact.title")}</h2>
-            <p className="mt-4 text-lg xl:text-xl text-foreground/70">{t("support.contact.body")}</p>
+            <p className="mt-4 text-lg text-foreground/70">{t("support.contact.body")}</p>
 
             <div className="mt-6 flex items-center gap-3 text-sm">
               <Mail className="h-4 w-4 text-sage" />

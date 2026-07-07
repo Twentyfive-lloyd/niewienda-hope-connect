@@ -65,10 +65,10 @@ function Index() {
 
             <div className="mt-10 grid grid-cols-2 gap-6">
               {[
-                { icon: Users, value: "12 000+", label: t("home.impact.beneficiaries") },
-                { icon: Activity, value: "80+", label: t("home.impact.campaigns") },
-                { icon: HeartHandshake, value: "35", label: t("home.impact.partners") },
-                { icon: Globe2, value: "6", label: t("home.impact.countries") },
+                { icon: Users, value: "10+", label: t("home.impact.beneficiaries") },
+                { icon: Activity, value: "1+", label: t("home.impact.campaigns") },
+                { icon: HeartHandshake, value: "5+", label: t("home.impact.partners") },
+                { icon: Globe2, value: "3+", label: t("home.impact.countries") },
               ].map((s, i) => (
                 <div key={i} className="rounded-2xl border border-border bg-background p-6">
                   <s.icon className="h-5 w-5 text-sage" />

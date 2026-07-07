@@ -249,7 +249,8 @@ export function bannerFor(category: Topic["category"]): { src: string; label: st
 }
 
 const topicImageOverrides: Record<string, { src: string; label: string }> = {
-  "comprendre-le-diabete": { src: "/images/img13.jpg", label: "img13" },
+  "comprendre-le-diabete": { src: "/images/img12.png", label: "img12" },
+  "bonnes-pratiques": { src: "/images/img28.png", label: "img28" },
   "faq": { src: "/images/img25.png", label: "img25" },
 };
 

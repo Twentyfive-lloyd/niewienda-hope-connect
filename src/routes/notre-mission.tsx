@@ -48,10 +48,10 @@ function MissionPage() {
       {/* Hero */}
       <section className="relative">
         <div className="container-site pt-16 md:pt-24 pb-16">
-          <div className="max-w-3xl">
+          <div className="max-w-3xl xl:max-w-5xl">
             <div className="text-xs uppercase tracking-[0.22em] text-sage">{t("mission.hero.eyebrow")}</div>
             <h1 className="mt-4 font-display text-5xl leading-[1.05] text-navy md:text-7xl xl:text-8xl">{t("mission.hero.title")}</h1>
-            <p className="mt-6 max-w-2xl text-lg xl:text-xl text-foreground/75">{t("mission.hero.subtitle")}</p>
+            <p className="mt-6 max-w-2xl xl:max-w-3xl text-lg xl:text-xl text-foreground/75">{t("mission.hero.subtitle")}</p>
           </div>
         </div>
         <div className="container-site">
@@ -134,7 +134,7 @@ function MissionPage() {
       {/* Team */}
       <section className="py-24 md:py-32">
         <div className="container-site">
-          <div className="max-w-2xl">
+          <div className="max-w-2xl xl:max-w-4xl">
             <div className="text-xs uppercase tracking-[0.22em] text-sage">05</div>
             <h2 className="mt-2 font-display text-4xl text-navy md:text-5xl">{t("mission.team.title")}</h2>
             <p className="mt-4 text-lg xl:text-xl text-foreground/70">{t("mission.team.body")}</p>

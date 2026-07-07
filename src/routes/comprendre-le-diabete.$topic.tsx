@@ -62,7 +62,7 @@ function TopicPage() {
         <div className="absolute inset-0 bg-gradient-to-br from-sage-soft to-cream" />
         <div className="absolute inset-0 hero-overlay opacity-70" />
         <div className="relative z-10 flex h-full items-end pb-14">
-          <div className="container-site text-primary-foreground max-w-3xl">
+          <div className="container-site text-primary-foreground max-w-3xl xl:max-w-5xl">
             <Link to="/comprendre-le-diabete" className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.22em] text-white/80 hover:text-white">
               <ArrowLeft className="h-3.5 w-3.5" /> {t("nav.understand")}
             </Link>

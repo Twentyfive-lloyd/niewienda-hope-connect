@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { Facebook, Instagram, Linkedin, Mail } from "lucide-react";
+import { Instagram, Linkedin, Mail } from "lucide-react";
 import { useI18n } from "@/lib/i18n";
 
 export function Footer() {
@@ -18,11 +18,12 @@ export function Footer() {
           </div>
           <p className="mt-6 text-sm text-primary-foreground/80 leading-relaxed">{t("footer.tagline")}</p>
           <div className="mt-6 flex items-center gap-3">
-            {[Facebook, Instagram, Linkedin].map((Icon, i) => (
-              <a key={i} href="#" aria-label="social" className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-white/10 hover:bg-white/20 transition-colors">
-                <Icon className="h-4 w-4" />
-              </a>
-            ))}
+            <a href="https://www.instagram.com/niewienda.health.ev" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-white/10 hover:bg-white/20 transition-colors">
+              <Instagram className="h-4 w-4" />
+            </a>
+            <a href="https://www.linkedin.com/company/niewienda-health-e-v" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-white/10 hover:bg-white/20 transition-colors">
+              <Linkedin className="h-4 w-4" />
+            </a>
           </div>
         </div>
 

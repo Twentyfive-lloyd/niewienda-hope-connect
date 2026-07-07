@@ -54,8 +54,8 @@ function SupportPage() {
   return (
     <SiteLayout>
       {/* Hero */}
-      <section className="relative -mt-20 h-[70vh] min-h-[500px] w-full overflow-hidden">
-        <img src="/images/img26.png" alt="" className="absolute inset-0 h-full w-full object-cover" onError={(e) => (e.currentTarget.style.display = "none")} />
+      <section className="relative -mt-20 h-[70vh] min-h-[500px] w-full overflow-hidden bg-navy">
+        <img src="/images/img26.png" alt="" className="absolute inset-0 h-full w-full object-contain object-center" onError={(e) => (e.currentTarget.style.display = "none")} />
         <div className="absolute inset-0 bg-gradient-to-br from-navy/70 to-sage/50" />
         <div className="absolute inset-0 bg-gradient-to-t from-navy/80 via-navy/30 to-transparent" />
         <div className="relative z-10 flex h-full items-end pb-16 md:pb-24">

@@ -20,6 +20,7 @@ export function Header() {
     { to: "/", label: t("nav.home") },
     { to: "/notre-mission", label: t("nav.mission") },
     { to: "/nos-actions", label: t("nav.actions") },
+    { to: "/partenariats", label: t("nav.partners") },
     { to: "/comprendre-le-diabete", label: t("nav.understand") },
     { to: "/nous-soutenir", label: t("nav.support") },
   ] as const;

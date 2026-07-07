@@ -59,10 +59,10 @@ function ActionsPage() {
       <section className="bg-navy py-24 text-primary-foreground">
         <div className="container-site grid gap-10 md:grid-cols-4 text-center">
           {[
-            { v: "12 000+", l: t("home.impact.beneficiaries") },
-            { v: "80+", l: t("home.impact.campaigns") },
-            { v: "35", l: t("home.impact.partners") },
-            { v: "6", l: t("home.impact.countries") },
+            { v: "10+", l: t("home.impact.beneficiaries") },
+            { v: "1+", l: t("home.impact.campaigns") },
+            { v: "5+", l: t("home.impact.partners") },
+            { v: "3+", l: t("home.impact.countries") },
           ].map((s, i) => (
             <div key={i}>
               <div className="font-display text-5xl md:text-6xl text-sage-soft">{s.v}</div>

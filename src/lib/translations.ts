@@ -5,6 +5,7 @@ const fr = {
   "nav.home": "Accueil",
   "nav.mission": "Notre Mission",
   "nav.actions": "Nos Actions",
+  "nav.partners": "Partenaires",
   "nav.understand": "Comprendre le Diabète",
   "nav.support": "Nous Soutenir",
 

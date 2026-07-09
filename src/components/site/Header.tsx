@@ -22,24 +22,25 @@ export function Header() {
     { to: "/nos-actions", label: t("nav.actions") },
     { to: "/partenariats", label: t("nav.partners") },
     { to: "/comprendre-le-diabete", label: t("nav.understand") },
-    { to: "/nous-soutenir", label: t("nav.support") },
   ] as const;
+
+  const isLightHeader = !scrolled && !open;
 
   return (
     <header
       className={cn(
         "fixed inset-x-0 top-0 z-50 transition-all duration-300",
         scrolled || open
-          ? "bg-background/95 backdrop-blur border-b border-border shadow-[0_1px_0_rgba(0,0,0,0.02)]"
+          ? "border-b border-border/70 bg-background/90 backdrop-blur-xl shadow-[0_10px_30px_rgba(2,6,23,0.06)]"
           : "bg-transparent"
       )}
     >
-      <div className="container-site flex h-20 items-center justify-between">
+      <div className="section-shell flex h-20 items-center justify-between">
         <Link to="/" className="flex items-center gap-3" onClick={() => setOpen(false)}>
-          <img src="/images/logo.jpg" alt="Niewienda Health" className="h-11 w-11 rounded-full object-cover ring-1 ring-border" />
+          <img src="/images/logo.jpg" alt="Niewienda Health" className={cn("h-11 w-11 rounded-full object-cover ring-1", isLightHeader ? "ring-white/40" : "ring-border")} />
           <div className="hidden sm:block leading-tight">
-            <div className="font-display text-xl text-navy">Niewienda</div>
-            <div className="text-[11px] uppercase tracking-[0.22em] text-sage">health e.V.</div>
+            <div className={cn("font-display text-xl", isLightHeader ? "text-white" : "text-navy")}>Niewienda</div>
+            <div className={cn("text-[11px] uppercase tracking-[0.22em]", isLightHeader ? "text-sage/80" : "text-sage")}>health e.V.</div>
           </div>
         </Link>
 
@@ -49,7 +50,12 @@ export function Header() {
               key={n.to}
               to={n.to}
               activeOptions={{ exact: n.to === "/" }}
-              className="text-sm text-navy/80 hover:text-navy transition-colors data-[status=active]:text-navy data-[status=active]:font-medium"
+              className={cn(
+                "text-sm transition-colors",
+                isLightHeader
+                  ? "text-white/90 hover:text-white data-[status=active]:font-medium data-[status=active]:text-white"
+                  : "text-navy/80 hover:text-navy data-[status=active]:font-medium data-[status=active]:text-navy"
+              )}
             >
               {n.label}
             </Link>
@@ -57,15 +63,19 @@ export function Header() {
         </nav>
 
         <div className="flex items-center gap-3">
-          <div className="hidden sm:flex items-center gap-1 rounded-full border border-border bg-background/70 px-1 py-1 text-xs">
-            <Globe className="ml-1.5 h-3.5 w-3.5 text-navy/60" />
+          <div className={cn("hidden sm:flex items-center gap-1 rounded-full border px-1 py-1 text-xs shadow-sm", isLightHeader ? "border-white/20 bg-white/10 text-white" : "border-border/80 bg-background/80 text-navy") }>
+            <Globe className={cn("ml-1.5 h-3.5 w-3.5", isLightHeader ? "text-white/70" : "text-navy/60")} />
             {(["fr", "en"] as const).map((l) => (
               <button
                 key={l}
                 onClick={() => setLang(l)}
                 className={cn(
                   "rounded-full px-2.5 py-1 uppercase tracking-wider transition-colors",
-                  lang === l ? "bg-navy text-primary-foreground" : "text-navy/70 hover:text-navy"
+                  lang === l
+                    ? "bg-navy text-primary-foreground"
+                    : isLightHeader
+                      ? "text-white/80 hover:text-white"
+                      : "text-navy/70 hover:text-navy"
                 )}
                 aria-pressed={lang === l}
               >
@@ -76,13 +86,23 @@ export function Header() {
 
           <Link
             to="/nous-soutenir"
-            className="hidden md:inline-flex items-center rounded-full bg-navy px-5 py-2.5 text-sm font-medium text-primary-foreground hover:bg-navy-soft transition-colors"
+            className={cn(
+              "hidden md:inline-flex items-center rounded-full px-5 py-2.5 text-sm font-medium transition-colors",
+              isLightHeader
+                ? "bg-sage text-white hover:bg-sage/90"
+                : "bg-navy text-primary-foreground hover:bg-navy-soft"
+            )}
           >
             {t("cta.support")}
           </Link>
 
           <button
-            className="lg:hidden inline-flex h-10 w-10 items-center justify-center rounded-full border border-border bg-background text-navy"
+            className={cn(
+              "inline-flex h-10 w-10 items-center justify-center rounded-full border lg:hidden",
+              isLightHeader
+                ? "border-sage/30 bg-sage-soft/90 text-navy"
+                : "border-border bg-background text-navy"
+            )}
             onClick={() => setOpen((o) => !o)}
             aria-label="Menu"
           >
@@ -92,8 +112,8 @@ export function Header() {
       </div>
 
       {open && (
-        <div className="lg:hidden border-t border-border bg-background">
-          <div className="container-site py-6 flex flex-col gap-1">
+        <div className="border-t border-border/70 bg-background/95 lg:hidden">
+          <div className="section-shell flex flex-col gap-1 py-6">
             {nav.map((n) => (
               <Link
                 key={n.to}

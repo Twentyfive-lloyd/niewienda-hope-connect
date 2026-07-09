@@ -21,54 +21,59 @@ function UnderstandHub() {
   const { t, lang } = useI18n();
   return (
     <SiteLayout>
-      {/* Hero */}
-      <section className="relative -mt-20 h-[65vh] min-h-[460px] w-full overflow-hidden">
+      <section className="relative -mt-20 h-[68vh] min-h-[500px] w-full overflow-hidden">
         <img src="/images/img20.jpg" alt="" className="absolute inset-0 h-full w-full object-cover" />
         <div className="absolute inset-0 hero-overlay" />
         <div className="relative z-10 flex h-full items-end pb-16">
-          <div className="container-site text-primary-foreground max-w-3xl">
-            <div className="text-xs uppercase tracking-[0.22em] text-white/80">{t("understand.hero.eyebrow")}</div>
-            <h1 className="mt-4 font-display text-5xl leading-[1.05] md:text-7xl">{t("understand.hero.title")}</h1>
-            <p className="mt-6 text-lg text-white/85">{t("understand.hero.subtitle")}</p>
+          <div className="section-shell text-primary-foreground">
+            <div className="grid gap-8 lg:grid-cols-[1.1fr_0.9fr] lg:items-end">
+              <div className="max-w-3xl">
+                <div className="text-xs uppercase tracking-[0.22em] text-white/80">{t("understand.hero.eyebrow")}</div>
+                <h1 className="mt-4 font-display text-5xl leading-[1.05] md:text-7xl">{t("understand.hero.title")}</h1>
+                <p className="mt-6 text-lg text-white/85">{t("understand.hero.subtitle")}</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
       <section className="py-24 md:py-32">
-        <div className="container-site">
-          <div className="max-w-2xl">
-            <div className="text-xs uppercase tracking-[0.22em] text-sage">
-              <BookOpen className="mr-2 inline h-3.5 w-3.5" /> {t("understand.topics.title")}
+        <div className="section-shell">
+          <div className="grid gap-8 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
+            <div className="space-y-4">
+              <div className="eyebrow">
+                <BookOpen className="h-3.5 w-3.5" /> {t("understand.topics.title")}
+              </div>
+              <h2 className="font-display text-4xl text-navy md:text-5xl">
+                {lang === "fr" ? "7 ressources pour mieux comprendre." : "7 resources to understand better."}
+              </h2>
+              <p className="text-lg leading-relaxed text-foreground/70">Chaque article propose un éclairage pratique, clair et adapté à la compréhension du diabète et de ses enjeux.</p>
             </div>
-            <h2 className="mt-3 font-display text-4xl text-navy md:text-5xl">
-              {lang === "fr" ? "7 ressources pour mieux comprendre." : "7 resources to understand better."}
-            </h2>
-          </div>
-
-          <div className="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {topics.map((topic, idx) => (
-              <Link
-                key={topic.slug}
-                to="/comprendre-le-diabete/$topic"
-                params={{ topic: topic.slug }}
-                className="group flex flex-col rounded-3xl border border-border bg-background overflow-hidden hover:shadow-xl transition-shadow"
-              >
-                <SmartImage
-                  src={imageForTopic(topic.slug, idx).src}
-                  alt={topic.title[lang]}
-                  ratio="aspect-[16/10]"
-                  label={imageForTopic(topic.slug, idx).label}
-                />
-                <div className="p-7 flex-1 flex flex-col">
-                  <div className="text-xs uppercase tracking-[0.22em] text-sage">0{idx + 1}</div>
-                  <h3 className="mt-2 font-display text-2xl text-navy leading-tight">{topic.title[lang]}</h3>
-                  <p className="mt-3 text-sm text-foreground/65 leading-relaxed flex-1">{topic.excerpt[lang]}</p>
-                  <span className="mt-6 inline-flex items-center gap-2 text-sm font-medium text-navy group-hover:text-sage transition-colors">
-                    {t("common.readMore")} <ArrowRight className="h-4 w-4" />
-                  </span>
-                </div>
-              </Link>
-            ))}
+            <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+              {topics.map((topic, idx) => (
+                <Link
+                  key={topic.slug}
+                  to="/comprendre-le-diabete/$topic"
+                  params={{ topic: topic.slug }}
+                  className="group flex flex-col overflow-hidden rounded-[1.6rem] border border-border bg-background transition-shadow hover:shadow-xl"
+                >
+                  <SmartImage
+                    src={imageForTopic(topic.slug, idx).src}
+                    alt={topic.title[lang]}
+                    ratio="aspect-[16/10]"
+                    label={imageForTopic(topic.slug, idx).label}
+                  />
+                  <div className="flex flex-1 flex-col p-6">
+                    <div className="text-xs uppercase tracking-[0.22em] text-sage">0{idx + 1}</div>
+                    <h3 className="mt-2 font-display text-2xl text-navy leading-tight">{topic.title[lang]}</h3>
+                    <p className="mt-3 flex-1 text-sm leading-relaxed text-foreground/65">{topic.excerpt[lang]}</p>
+                    <span className="mt-6 inline-flex items-center gap-2 text-sm font-medium text-navy transition-colors group-hover:text-sage">
+                      {t("common.readMore")} <ArrowRight className="h-4 w-4" />
+                    </span>
+                  </div>
+                </Link>
+              ))}
+            </div>
           </div>
         </div>
       </section>

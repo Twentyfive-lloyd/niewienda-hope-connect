@@ -95,13 +95,8 @@ function Index() {
 
       <section className="py-24 md:py-32">
         <div className="section-shell grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
-          <div
-            className="card-elevated relative overflow-hidden rounded-[2rem] bg-navy p-8 text-primary-foreground bg-center bg-no-repeat"
-            style={{
-              backgroundImage: "url('/images/img51.jpg')",
-              backgroundSize: "contain",
-            }}
-          >
+          <div className="card-elevated relative overflow-hidden rounded-[2rem] bg-navy p-8 text-primary-foreground">
+            <div className="absolute inset-0 bg-center bg-cover bg-no-repeat" style={{ backgroundImage: "url('/images/img51.jpg')" }} />
             <div className="absolute inset-0 rounded-[2rem] bg-navy/75" />
             <div className="relative">
               <div className="eyebrow text-sage-soft">Engagement</div>

@@ -45,9 +45,9 @@ function ActionsPage() {
       <section className="py-24 md:py-32">
         <div className="section-shell grid gap-8 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
           <div className="space-y-4">
-            <div className="eyebrow">Programmes</div>
-            <h2 className="font-display text-4xl text-navy md:text-5xl">Des interventions concrètes et adaptées</h2>
-            <p className="text-lg text-foreground/70">Nous intervenons à tous les niveaux, de la sensibilisation à l’accompagnement, avec une approche claire et humaine.</p>
+            <div className="eyebrow">Programs</div>
+            <h2 className="font-display text-4xl text-navy md:text-5xl">Practical and tailored interventions</h2>
+            <p className="text-lg text-foreground/70">We work at every level, from awareness to support, with a clear and human approach.</p>
           </div>
           <div className="grid gap-6 md:grid-cols-3">
             {cards.map((c) => (
@@ -68,7 +68,7 @@ function ActionsPage() {
         <div className="section-shell grid gap-8 lg:grid-cols-[0.95fr_1.05fr] lg:items-start">
           <div className="space-y-4">
             <div className="eyebrow text-sage-soft">Impact</div>
-            <h2 className="font-display text-4xl md:text-5xl">Des résultats mesurables et un impact visible</h2>
+            <h2 className="font-display text-4xl md:text-5xl">Measurable results and visible impact</h2>
           </div>
           <div className="grid gap-4 sm:grid-cols-2">
             {[
@@ -89,13 +89,13 @@ function ActionsPage() {
       <section className="py-24 md:py-32">
         <div className="section-shell grid gap-8 lg:grid-cols-[1fr_0.9fr] lg:items-start">
           <div className="card-soft rounded-[2rem] p-8">
-            <div className="eyebrow">Méthodes</div>
-            <h2 className="mt-3 font-display text-4xl text-navy md:text-5xl">Un parcours clair pour chaque bénéficiaire</h2>
+            <div className="eyebrow">Methods</div>
+            <h2 className="mt-3 font-display text-4xl text-navy md:text-5xl">A clear pathway for every beneficiary</h2>
             <div className="mt-8 space-y-5">
               {[
-                { title: "Sensibilisation", body: "Des messages simples, adaptés et crédibles pour informer les communautés." },
-                { title: "Dépistage", body: "Des campagnes de proximité pour faciliter l’accès aux soins et à l’information." },
-                { title: "Accompagnement", body: "Un suivi humain pour rendre les démarches plus accessibles." },
+                { title: "Awareness", body: "Simple, relevant and credible messages to inform communities." },
+                { title: "Screening", body: "Local campaigns that make access to care and information easier." },
+                { title: "Support", body: "Human follow-up that makes the process more accessible." },
               ].map((item) => (
                 <div key={item.title} className="rounded-[1.3rem] border border-border bg-background p-4">
                   <div className="font-display text-xl text-navy">{item.title}</div>
@@ -106,8 +106,8 @@ function ActionsPage() {
           </div>
           <div className="space-y-5">
             <div className="card-elevated rounded-[2rem] p-8">
-              <div className="text-sm uppercase tracking-[0.2em] text-sage">Bénéfices</div>
-              <div className="mt-3 text-lg leading-relaxed text-foreground/75">Nous mettons l’humain au centre pour réduire les freins et faciliter des parcours de soin plus sûrs.</div>
+              <div className="text-sm uppercase tracking-[0.2em] text-sage">Benefits</div>
+              <div className="mt-3 text-lg leading-relaxed text-foreground/75">We put people at the center to reduce barriers and make care pathways safer and easier.</div>
             </div>
             <SmartImage src="/images/img8.jpg" alt="" ratio="aspect-[4/3]" className="rounded-[1.75rem]" label="img8" />
           </div>

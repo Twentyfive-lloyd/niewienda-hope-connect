@@ -43,6 +43,14 @@ function MissionPage() {
     { icon: Users, title: "Local engagement", body: "We build with communities, never in their place." },
   ];
 
+  const missionVision = lang === "fr" ? [
+    { title: "Mission", body: "Réduire les inégalités face au diabète grâce à la prévention, à l’information et à l’accompagnement." },
+    { title: "Vision", body: "Créer des communautés plus informées, plus solidaires et mieux accompagnées." },
+  ] : [
+    { title: "Mission", body: "Reduce inequalities related to diabetes through prevention, information, and support." },
+    { title: "Vision", body: "Create communities that are better informed, more supportive, and better accompanied." },
+  ];
+
   return (
     <SiteLayout>
       <section className="relative">
@@ -86,14 +94,12 @@ function MissionPage() {
             <h2 className="font-display text-4xl text-navy md:text-5xl">{t("mission.vision.title")}</h2>
           </div>
           <div className="grid gap-4 sm:grid-cols-2">
-            <div className="card-elevated rounded-[1.5rem] p-6">
-              <div className="font-display text-2xl text-navy">Mission</div>
-              <p className="mt-3 text-sm leading-relaxed text-foreground/70">Réduire les inégalités face au diabète grâce à la prévention, à l’information et à l’accompagnement.</p>
-            </div>
-            <div className="card-elevated rounded-[1.5rem] p-6">
-              <div className="font-display text-2xl text-navy">Vision</div>
-              <p className="mt-3 text-sm leading-relaxed text-foreground/70">Créer des communautés plus informées, plus solidaires et mieux accompagnées.</p>
-            </div>
+            {missionVision.map((item) => (
+              <div key={item.title} className="card-elevated rounded-[1.5rem] p-6">
+                <div className="font-display text-2xl text-navy">{item.title}</div>
+                <p className="mt-3 text-sm leading-relaxed text-foreground/70">{item.body}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>

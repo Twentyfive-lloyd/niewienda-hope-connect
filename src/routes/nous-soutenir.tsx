@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
-import { HandCoins, Users, Handshake, Mail, ArrowRight, Heart, Facebook, Instagram, Linkedin } from "lucide-react";
+import { HandCoins, Users, Handshake, Mail, ArrowRight, Heart, Instagram, Linkedin } from "lucide-react";
 import { SiteLayout } from "@/components/site/Layout";
 import { SmartImage } from "@/components/site/SmartImage";
 import { useI18n } from "@/lib/i18n";
@@ -135,11 +135,12 @@ function SupportPage() {
               <a href="mailto:Niewienda.health@gmail.com" className="break-all text-navy transition-colors hover:text-sage">Niewienda.health@gmail.com</a>
             </div>
             <div className="mt-6 flex items-center gap-3">
-              {[Facebook, Instagram, Linkedin].map((Icon, i) => (
-                <a key={i} href="#" aria-label="social" className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-border bg-background text-navy transition-colors hover:bg-sage-soft">
-                  <Icon className="h-4 w-4" />
-                </a>
-              ))}
+              <a href="https://www.instagram.com/niewienda.health.ev" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-border bg-background text-navy transition-colors hover:bg-sage-soft">
+                <Instagram className="h-4 w-4" />
+              </a>
+              <a href="https://www.linkedin.com/company/niewienda-health-e-v" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-border bg-background text-navy transition-colors hover:bg-sage-soft">
+                <Linkedin className="h-4 w-4" />
+              </a>
             </div>
           </div>
         </div>

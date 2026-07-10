@@ -240,11 +240,11 @@ export const topics: Topic[] = [
 export function bannerFor(category: Topic["category"]): { src: string; label: string } {
   switch (category) {
     case "prevention":
-      return { src: "/images/img13.jpg", label: "img13" };
+      return { src: "/images/img13.png", label: "img13" };
     case "practice":
-      return { src: "/images/img14.jpg", label: "img14" };
+      return { src: "/images/img14.png", label: "img14" };
     default:
-      return { src: "/images/img12.jpg", label: "img12" };
+      return { src: "/images/img12.png", label: "img12" };
   }
 }
 
@@ -256,5 +256,5 @@ const topicImageOverrides: Record<string, { src: string; label: string }> = {
 
 export function imageForTopic(slug: string, idx: number): { src: string; label: string } {
   if (topicImageOverrides[slug]) return topicImageOverrides[slug];
-  return { src: `/images/img${12 + idx}.jpg`, label: `img${12 + idx}` };
+  return { src: `/images/img${12 + idx}.png`, label: `img${12 + idx}` };
 }

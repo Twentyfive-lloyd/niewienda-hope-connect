@@ -47,8 +47,8 @@ function Index() {
             <h2 className="max-w-2xl font-display text-4xl leading-tight text-navy md:text-5xl">{t("home.intro.title")}</h2>
             <p className="max-w-2xl text-lg leading-relaxed text-foreground/75">{t("home.intro.body")}</p>
             <div className="card-soft rounded-[1.75rem] p-6">
-              <div className="font-display text-2xl text-navy">Une réponse locale, scientifique et humaine</div>
-              <p className="mt-3 text-sm leading-relaxed text-foreground/70">Nous accompagnons les communautés avec des actions accessibles, des partenariats solides et une approche respectueuse du terrain.</p>
+              <div className="font-display text-2xl text-navy">{t("home.valueCard.title")}</div>
+              <p className="mt-3 text-sm leading-relaxed text-foreground/70">{t("home.valueCard.body")}</p>
             </div>
           </div>
           <div className="space-y-5">
@@ -56,8 +56,8 @@ function Index() {
             <div className="flex items-center gap-3 rounded-[1.5rem] border border-border bg-cream/80 p-4">
               <div className="rounded-full bg-sage-soft p-3 text-sage"><HeartHandshake className="h-5 w-5" /></div>
               <div>
-                <div className="font-medium text-navy">Agir avec dignité et efficacité</div>
-                <div className="text-sm text-foreground/60">Chaque intervention est pensée pour être utile, durable et accessible.</div>
+                <div className="font-medium text-navy">{t("home.valueCard.secondaryTitle")}</div>
+                <div className="text-sm text-foreground/60">{t("home.valueCard.secondaryBody")}</div>
               </div>
             </div>
           </div>
@@ -86,8 +86,8 @@ function Index() {
               ))}
             </div>
             <div className="card-soft rounded-[1.75rem] p-6">
-              <div className="text-sm uppercase tracking-[0.2em] text-sage">Ce que nous valorisons</div>
-              <div className="mt-3 text-lg text-navy">Accessibilité, qualité, proximité et transmission de savoirs.</div>
+              <div className="text-sm uppercase tracking-[0.2em] text-sage">{t("home.values.title")}</div>
+              <div className="mt-3 text-lg text-navy">{t("home.values.body")}</div>
             </div>
           </div>
         </div>
@@ -114,10 +114,10 @@ function Index() {
           </div>
           <div className="grid gap-4 sm:grid-cols-2">
             {[
-              { title: "Mission", body: "Créer des solutions de santé accessibles et proches des réalités locales." },
-              { title: "Vision", body: "Un monde où la prévention et l’information réduisent les inégalités." },
-              { title: "Actions", body: "Campagnes, dépistage, sensibilisation et accompagnement." },
-              { title: "Réseau", body: "Des partenaires engagés pour une réponse plus forte." },
+              { title: t("home.cards.mission.title"), body: t("home.cards.mission.body") },
+              { title: t("home.cards.vision.title"), body: t("home.cards.vision.body") },
+              { title: t("home.cards.actions.title"), body: t("home.cards.actions.body") },
+              { title: t("home.cards.network.title"), body: t("home.cards.network.body") },
             ].map((item) => (
               <div key={item.title} className="card-soft rounded-[1.5rem] p-6">
                 <div className="font-display text-2xl text-navy">{item.title}</div>

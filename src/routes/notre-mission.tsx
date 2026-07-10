@@ -54,9 +54,9 @@ function MissionPage() {
               <p className="mt-6 max-w-2xl text-lg text-foreground/75">{t("mission.hero.subtitle")}</p>
             </div>
             <div className="card-elevated rounded-[2rem] p-6">
-              <div className="text-sm uppercase tracking-[0.2em] text-sage">Notre promesse</div>
-              <div className="mt-3 font-display text-2xl text-navy">Un engagement au service de la prévention et de la dignité.</div>
-              <p className="mt-3 text-sm leading-relaxed text-foreground/70">Nous construisons des réponses concrètes, locales et durables pour améliorer l’accès à l’information et aux soins.</p>
+              <div className="text-sm uppercase tracking-[0.2em] text-sage">{t("mission.promise.title")}</div>
+              <div className="mt-3 font-display text-2xl text-navy">{t("mission.promise.heading")}</div>
+              <p className="mt-3 text-sm leading-relaxed text-foreground/70">{t("mission.promise.body")}</p>
             </div>
           </div>
         </div>

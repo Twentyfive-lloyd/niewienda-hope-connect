@@ -62,6 +62,8 @@ function UnderstandHub() {
                     alt={topic.title[lang]}
                     ratio="aspect-[16/10]"
                     label={imageForTopic(topic.slug, idx).label}
+                    previewable
+                    previewLabel={topic.title[lang]}
                   />
                   <div className="flex flex-1 flex-col p-6">
                     <div className="text-xs uppercase tracking-[0.22em] text-sage">0{idx + 1}</div>

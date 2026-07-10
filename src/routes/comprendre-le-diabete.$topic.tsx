@@ -83,6 +83,20 @@ function TopicPage() {
               </div>
             </div>
 
+            <div className="mt-16 overflow-hidden rounded-[2rem] border border-border bg-background shadow-sm">
+              <SmartImage
+                src={banner.src}
+                alt={topic.title[lang]}
+                ratio="aspect-[16/10]"
+                label={banner.label}
+                previewable
+                previewLabel={topic.title[lang]}
+              />
+            </div>
+            <p className="mt-4 text-sm leading-relaxed text-foreground/60">
+              {lang === "fr" ? "Cliquez sur l’image pour l’agrandir et revoir les détails." : "Click the image to zoom in and review the details."}
+            </p>
+
             <div className="mt-16 space-y-8">
               {sections.map((s, i) => (
                 <section key={i} className="card-soft rounded-[2rem] p-8 md:p-10">

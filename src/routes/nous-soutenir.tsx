@@ -66,9 +66,9 @@ function SupportPage() {
                 <p className="mt-6 text-lg text-white/85">{t("support.hero.subtitle")}</p>
               </div>
               <div className="card-elevated rounded-[2rem] bg-white/90 p-6 text-navy">
-                <div className="eyebrow">Pourquoi agir</div>
-                <div className="mt-3 font-display text-2xl">Chaque forme de soutien apporte une réponse concrète et durable.</div>
-                <p className="mt-3 text-sm leading-relaxed text-foreground/70">Votre aide permet d’élargir l’accès à l’information, au dépistage et à l’accompagnement humain.</p>
+                <div className="eyebrow">{lang === "fr" ? "Pourquoi agir" : "Why act"}</div>
+                <div className="mt-3 font-display text-2xl">{lang === "fr" ? "Chaque forme de soutien apporte une réponse concrète et durable." : "Every form of support provides a concrete and lasting response."}</div>
+                <p className="mt-3 text-sm leading-relaxed text-foreground/70">{lang === "fr" ? "Votre aide permet d’élargir l’accès à l’information, au dépistage et à l’accompagnement humain." : "Your support helps expand access to information, screening, and human support."}</p>
               </div>
             </div>
           </div>

@@ -17,7 +17,7 @@ export const Route = createFileRoute("/nos-actions")({
 });
 
 function ActionsPage() {
-  const { t } = useI18n();
+  const { t, lang } = useI18n();
   const cards = [
     { icon: Megaphone, title: t("actions.awareness.title"), body: t("actions.awareness.body"), img: "/images/img8.jpg", label: "img8" },
     { icon: Stethoscope, title: t("actions.screening.title"), body: t("actions.screening.body"), img: "/images/img9.jpg", label: "img9" },
@@ -45,9 +45,9 @@ function ActionsPage() {
       <section className="py-24 md:py-32">
         <div className="section-shell grid gap-8 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
           <div className="space-y-4">
-            <div className="eyebrow">Programs</div>
-            <h2 className="font-display text-4xl text-navy md:text-5xl">Practical and tailored interventions</h2>
-            <p className="text-lg text-foreground/70">We work at every level, from awareness to support, with a clear and human approach.</p>
+            <div className="eyebrow">{lang === "fr" ? "Programmes" : "Programs"}</div>
+            <h2 className="font-display text-4xl text-navy md:text-5xl">{lang === "fr" ? "Des interventions concrètes et adaptées" : "Practical and tailored interventions"}</h2>
+            <p className="text-lg text-foreground/70">{lang === "fr" ? "Nous intervenons à tous les niveaux, de la sensibilisation au soutien, avec une approche claire et humaine." : "We work at every level, from awareness to support, with a clear and human approach."}</p>
           </div>
           <div className="grid gap-6 md:grid-cols-3">
             {cards.map((c) => (
@@ -89,13 +89,13 @@ function ActionsPage() {
       <section className="py-24 md:py-32">
         <div className="section-shell grid gap-8 lg:grid-cols-[1fr_0.9fr] lg:items-start">
           <div className="card-soft rounded-[2rem] p-8">
-            <div className="eyebrow">Methods</div>
-            <h2 className="mt-3 font-display text-4xl text-navy md:text-5xl">A clear pathway for every beneficiary</h2>
+            <div className="eyebrow">{lang === "fr" ? "Méthodes" : "Methods"}</div>
+            <h2 className="mt-3 font-display text-4xl text-navy md:text-5xl">{lang === "fr" ? "Une démarche claire pour chaque bénéficiaire" : "A clear pathway for every beneficiary"}</h2>
             <div className="mt-8 space-y-5">
               {[
-                { title: "Awareness", body: "Simple, relevant and credible messages to inform communities." },
-                { title: "Screening", body: "Local campaigns that make access to care and information easier." },
-                { title: "Support", body: "Human follow-up that makes the process more accessible." },
+                { title: lang === "fr" ? "Sensibilisation" : "Awareness", body: lang === "fr" ? "Des messages simples, pertinents et crédibles pour informer les communautés." : "Simple, relevant and credible messages to inform communities." },
+                { title: lang === "fr" ? "Dépistage" : "Screening", body: lang === "fr" ? "Des campagnes locales qui facilitent l’accès aux soins et à l’information." : "Local campaigns that make access to care and information easier." },
+                { title: lang === "fr" ? "Accompagnement" : "Support", body: lang === "fr" ? "Un suivi humain qui rend le parcours plus accessible." : "Human follow-up that makes the process more accessible." },
               ].map((item) => (
                 <div key={item.title} className="rounded-[1.3rem] border border-border bg-background p-4">
                   <div className="font-display text-xl text-navy">{item.title}</div>
@@ -106,8 +106,8 @@ function ActionsPage() {
           </div>
           <div className="space-y-5">
             <div className="card-elevated rounded-[2rem] p-8">
-              <div className="text-sm uppercase tracking-[0.2em] text-sage">Benefits</div>
-              <div className="mt-3 text-lg leading-relaxed text-foreground/75">We put people at the center to reduce barriers and make care pathways safer and easier.</div>
+              <div className="text-sm uppercase tracking-[0.2em] text-sage">{lang === "fr" ? "Bénéfices" : "Benefits"}</div>
+              <div className="mt-3 text-lg leading-relaxed text-foreground/75">{lang === "fr" ? "Nous plaçons les personnes au centre pour réduire les barrières et rendre les parcours de soins plus sûrs et plus accessibles." : "We put people at the center to reduce barriers and make care pathways safer and easier."}</div>
             </div>
             <SmartImage src="/images/img8.jpg" alt="" ratio="aspect-[4/3]" className="rounded-[1.75rem]" label="img8" />
           </div>
@@ -133,8 +133,8 @@ function ActionsPage() {
       <section className="pb-24">
         <div className="section-shell">
           <div className="card-elevated rounded-[2rem] bg-navy p-8 text-center text-primary-foreground md:p-12">
-            <h2 className="font-display text-4xl md:text-5xl">Votre soutien donne vie à ces actions</h2>
-            <p className="mx-auto mt-4 max-w-2xl text-lg text-white/80">Chaque contribution aide à mieux informer, accompagner et protéger les communautés touchées.</p>
+            <h2 className="font-display text-4xl md:text-5xl">{lang === "fr" ? "Votre soutien donne vie à ces actions" : "Your support brings these actions to life"}</h2>
+            <p className="mx-auto mt-4 max-w-2xl text-lg text-white/80">{lang === "fr" ? "Chaque contribution aide à mieux informer, accompagner et protéger les communautés touchées." : "Every contribution helps better inform, support, and protect the communities affected."}</p>
             <Link to="/nous-soutenir" className="mt-8 inline-flex items-center gap-2 rounded-full bg-sage px-8 py-4 text-sm font-medium text-white transition-colors hover:bg-sage/90">
               {t("cta.support")} <ArrowRight className="h-4 w-4" />
             </Link>

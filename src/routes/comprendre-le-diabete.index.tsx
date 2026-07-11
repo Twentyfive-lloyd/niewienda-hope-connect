@@ -58,12 +58,11 @@ function UnderstandHub() {
                   className="group flex flex-col overflow-hidden rounded-[1.6rem] border border-border bg-background transition-shadow hover:shadow-xl"
                 >
                   <SmartImage
-                    src={imageForTopic(topic.slug, idx).src}
+                    src={imageForTopic(topic.slug, idx, lang).src}
                     alt={topic.title[lang]}
                     ratio="aspect-[16/10]"
-                    label={imageForTopic(topic.slug, idx).label}
-                    previewable
-                    previewLabel={topic.title[lang]}
+                    label={imageForTopic(topic.slug, idx, lang).label}
+                    previewable={false}
                   />
                   <div className="flex flex-1 flex-col p-6">
                     <div className="text-xs uppercase tracking-[0.22em] text-sage">0{idx + 1}</div>

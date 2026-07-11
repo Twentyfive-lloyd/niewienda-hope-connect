@@ -49,7 +49,7 @@ function TopicPage() {
   const { lang, t } = useI18n();
   const currentIdx = topics.findIndex((x) => x.slug === slug);
   const topic = topics[currentIdx];
-  const banner = imageForTopic(topic.slug, currentIdx);
+  const banner = imageForTopic(topic.slug, currentIdx, lang);
   const sections = topic.sections[lang];
   const prev = topics[currentIdx - 1];
   const next = topics[currentIdx + 1];

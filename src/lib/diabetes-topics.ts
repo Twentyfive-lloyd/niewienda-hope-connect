@@ -1,3 +1,5 @@
+import type { Lang } from "./translations";
+
 export type TopicSection = {
   heading: string;
   paragraphs?: string[];
@@ -237,24 +239,54 @@ export const topics: Topic[] = [
   },
 ];
 
-export function bannerFor(category: Topic["category"]): { src: string; label: string } {
+const localizedImageBasePaths = new Set([
+  "/images/img12.png",
+  "/images/img13.png",
+  "/images/img14.png",
+  "/images/img15.png",
+  "/images/img16.png",
+  "/images/img28.png",
+]);
+
+function localizedImageSrc(src: string, lang: Lang) {
+  if (!localizedImageBasePaths.has(src)) return src;
+
+  const dotIndex = src.lastIndexOf(".");
+  if (dotIndex === -1) return src;
+
+  const base = src.slice(0, dotIndex);
+  const ext = src.slice(dotIndex);
+  return `${base}-${lang}${ext}`;
+}
+
+export function bannerFor(category: Topic["category"], lang: Lang = "fr"): { src: string; label: string } {
   switch (category) {
     case "prevention":
-      return { src: "/images/img13.png", label: "img13" };
+      return { src: localizedImageSrc("/images/img13.png", lang), label: "img13" };
     case "practice":
-      return { src: "/images/img14.png", label: "img14" };
+      return { src: localizedImageSrc("/images/img14.png", lang), label: "img14" };
     default:
-      return { src: "/images/img12.png", label: "img12" };
+      return { src: localizedImageSrc("/images/img12.png", lang), label: "img12" };
   }
 }
 
 const topicImageOverrides: Record<string, { src: string; label: string }> = {
   "comprendre-le-diabete": { src: "/images/img12.png", label: "img12" },
+  "types-de-diabete": { src: "/images/img13.png", label: "img13" },
+  "symptomes": { src: "/images/img14.png", label: "img14" },
+  "facteurs-de-risque": { src: "/images/img15.png", label: "img15" },
+  "prevention": { src: "/images/img16.png", label: "img16" },
   "bonnes-pratiques": { src: "/images/img28.png", label: "img28" },
-  "faq": { src: "/images/img25.png", label: "img25" },
+  faq: { src: "/images/img25.png", label: "img25" },
 };
 
-export function imageForTopic(slug: string, idx: number): { src: string; label: string } {
-  if (topicImageOverrides[slug]) return topicImageOverrides[slug];
-  return { src: `/images/img${12 + idx}.png`, label: `img${12 + idx}` };
+export function imageForTopic(slug: string, idx: number, lang: Lang = "fr"): { src: string; label: string } {
+  if (topicImageOverrides[slug]) {
+    return {
+      ...topicImageOverrides[slug],
+      src: localizedImageSrc(topicImageOverrides[slug].src, lang),
+    };
+  }
+
+  return { src: localizedImageSrc(`/images/img${12 + idx}.png`, lang), label: `img${12 + idx}` };
 }

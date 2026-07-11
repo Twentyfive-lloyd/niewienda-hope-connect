@@ -78,8 +78,8 @@ function TopicPage() {
             <div className="grid gap-8 lg:grid-cols-[1.1fr_0.9fr] lg:items-start">
               <p className="font-display text-2xl leading-relaxed text-navy md:text-3xl">{topic.intro[lang]}</p>
               <div className="card-elevated rounded-[1.75rem] p-6">
-                <div className="eyebrow">À retenir</div>
-                <p className="mt-3 text-sm leading-relaxed text-foreground/70">Chaque ressource est pensée pour offrir un contenu clair, utile et facile à parcourir.</p>
+                <div className="eyebrow">{lang === "fr" ? "À retenir" : "Key takeaway"}</div>
+                <p className="mt-3 text-sm leading-relaxed text-foreground/70">{lang === "fr" ? "Chaque ressource est pensée pour offrir un contenu clair, utile et facile à parcourir." : "Each resource is designed to offer clear, useful, and easy-to-navigate content."}</p>
               </div>
             </div>
 

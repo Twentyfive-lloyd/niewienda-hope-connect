@@ -111,13 +111,13 @@ function SupportPage() {
       <section className="bg-cream py-24 md:py-32">
         <div className="section-shell grid gap-8 lg:grid-cols-[1.05fr_0.95fr] lg:items-start">
           <div className="space-y-4">
-            <div className="eyebrow">Transparence</div>
-            <h2 className="font-display text-4xl text-navy md:text-5xl">Des engagements clairs, un suivi rassurant</h2>
-            <p className="text-lg leading-relaxed text-foreground/70">Nous nous efforçons d’offrir des parcours simples, des réponses honnêtes et un accompagnement humain à chaque étape.</p>
+            <div className="eyebrow">{lang === "fr" ? "Transparence" : "Transparency"}</div>
+            <h2 className="font-display text-4xl text-navy md:text-5xl">{lang === "fr" ? "Des engagements clairs, un suivi rassurant" : "Clear commitments, reassuring follow-up"}</h2>
+            <p className="text-lg leading-relaxed text-foreground/70">{lang === "fr" ? "Nous nous efforçons d’offrir des parcours simples, des réponses honnêtes et un accompagnement humain à chaque étape." : "We strive to offer simple journeys, honest answers, and human support at every step."}</p>
             <div className="grid gap-4 sm:grid-cols-2">
               {[
-                { title: "Impact direct", body: "Votre aide finance des actions concrètes sur le terrain." },
-                { title: "Écoute", body: "Un contact humain pour répondre à vos questions et projets." },
+                { title: lang === "fr" ? "Impact direct" : "Direct impact", body: lang === "fr" ? "Votre aide finance des actions concrètes sur le terrain." : "Your support funds concrete actions in the field." },
+                { title: lang === "fr" ? "Écoute" : "Listening", body: lang === "fr" ? "Un contact humain pour répondre à vos questions et projets." : "A human contact to answer your questions and projects." },
               ].map((item) => (
                 <div key={item.title} className="card-elevated rounded-[1.4rem] p-5">
                   <div className="font-display text-xl text-navy">{item.title}</div>

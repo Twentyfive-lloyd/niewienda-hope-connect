@@ -158,7 +158,6 @@ function MissionPage() {
                 { fr: "Niewienda A.", en: "Niewienda A.", roleFr: "Présidente de l'association", roleEn: "President of the association" },
                 { fr: "Erika Nouetagni", en: "Erika Nouetagni", roleFr: "Présidente par interim", roleEn: "Interim President" },
                 { fr: "Zianie Ouethy", en: "Zianie Ouethy", roleFr: "Caissière", roleEn: "Treasurer" },
-                { fr: "Kevin Njiokeng", en: "Kevin Njiokeng", roleFr: "Secrétaire", roleEn: "Secretary" },
                 { fr: "Tchiencheu Manga Olivier", en: "Tchiencheu Manga Olivier", roleFr: "Chargé des partenariats", roleEn: "Partnership Manager" }
               ].map((member, i) => (
                 <div key={i} className="card-soft rounded-[1.5rem] p-5">
